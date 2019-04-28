@@ -7,7 +7,7 @@
     <Company>Ziyad.info</Company>
     <Description>Localization package for dotnet core web appliations</Description>
     <Copyright>Ziyad.info</Copyright>
-    <PackageProjectUrl>http://www.ziyad.info/en/articles/27-LazZiya_TagHelpers</PackageProjectUrl>
+    <PackageProjectUrl>http://www.ziyad.info/en/articles/33-LazZiya_Localization</PackageProjectUrl>
     <PackageLicenseFile>license.txt</PackageLicenseFile>
     <PackageIcon>files\icon.png</PackageIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -20,8 +20,8 @@
     <FileVersion>0.0.7.0</FileVersion>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseUrl></PackageLicenseUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/LazZiya/TagHelpers/master/LazZiya.TagHelpers/files/icon.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/LazZiya/TagHelpers</RepositoryUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/LazZiya/Localization/master/LazZiya.Localization/files/icon.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/LazZiya/Localization</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp1.0|AnyCPU'">
