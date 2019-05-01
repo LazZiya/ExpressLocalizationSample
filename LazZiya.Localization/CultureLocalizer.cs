@@ -1,5 +1,4 @@
-﻿using LazZiya.Localization.LocalizationResources;
-using Microsoft.Extensions.Localization;
+﻿using Microsoft.Extensions.Localization;
 using System;
 using System.Reflection;
 
@@ -10,13 +9,12 @@ namespace LazZiya.Localization
     /// </summary>
     public class CultureLocalizer
     {
-        //private readonly IStringLocalizer _localizer;
+        private readonly IStringLocalizer _localizer;
 
-        public CultureLocalizer(IStringLocalizerFactory factory)
+        public CultureLocalizer(IStringLocalizerFactory factory, Type cultureResourceType)
         {
-            var type = typeof(CultureResource); // think of a way to pass culture resource type as parameter durin injection
-            var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
-            _localizer = factory.Create("CultureResource", assemblyName.Name);
+            var assemblyName = new AssemblyName(cultureResourceType.GetTypeInfo().Assembly.FullName);
+            _localizer = factory.Create(cultureResourceType.Name, assemblyName.Name);
         }
 
         public LocalizedString _(string key, params string[] arguments)
