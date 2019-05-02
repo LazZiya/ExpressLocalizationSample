@@ -31,6 +31,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.RazorPages" Version="2.0.0" Exclude="analyzers" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Localization" Version="2.0.0" Exclude="analyzers" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="2.0.0" Exclude="analyzers" />
   </ItemGroup>
 
   <!-- 

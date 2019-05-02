@@ -9,11 +9,11 @@ namespace LazZiya.Localization
 {
     public class RouteValueRequestCultureProvider : IRequestCultureProvider
     {
-        private List<CultureInfo> SupportedCultures { get; set; }
+        private IList<CultureInfo> SupportedCultures { get; set; }
 
         private string DefaultCulture { get; set; }
 
-        public RouteValueRequestCultureProvider(List<CultureInfo> supportedCultures, string defaultCulture)
+        public RouteValueRequestCultureProvider(IList<CultureInfo> supportedCultures, string defaultCulture)
         {
             SupportedCultures = supportedCultures;
             DefaultCulture = defaultCulture;

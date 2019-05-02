@@ -5,7 +5,7 @@ using System.Reflection;
 namespace LazZiya.Localization
 {
     /// <summary>
-    /// Access shared localization resources under folder /Resources/CultureResource.xx.resx
+    /// Access shared localization resources under folder
     /// </summary>
     public class CultureLocalizer
     {
@@ -17,7 +17,7 @@ namespace LazZiya.Localization
             _localizer = factory.Create(cultureResourceType.Name, assemblyName.Name);
         }
 
-        public LocalizedString _(string key, params string[] arguments)
+        public LocalizedString Localize(string key, params string[] arguments)
         {
             return arguments == null
                 ? _localizer[key]
