@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using LazZiya.Localization.Resources;
+using Microsoft.AspNetCore.Identity;
 
 namespace LazZiya.Localization
 {
@@ -9,7 +10,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(DuplicateEmail),
-                Description = string.Format(LocalizedFrameworkMessages.DuplicateEmail, email)
+                Description = string.Format(IdentityErrorDescriberMessages.DuplicateEmail, email)
             };
         }
 
@@ -18,7 +19,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(DuplicateUserName),
-                Description = string.Format(LocalizedFrameworkMessages.DuplicateUserName, userName)
+                Description = string.Format(IdentityErrorDescriberMessages.DuplicateUserName, userName)
             };
         }
 
@@ -27,7 +28,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(InvalidEmail),
-                Description = string.Format(LocalizedFrameworkMessages.InvalidEmail, email)
+                Description = string.Format(IdentityErrorDescriberMessages.InvalidEmail, email)
             };
         }
 
@@ -36,7 +37,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(DuplicateRoleName),
-                Description = string.Format(LocalizedFrameworkMessages.DuplicateRoleName, role)
+                Description = string.Format(IdentityErrorDescriberMessages.DuplicateRoleName, role)
             };
         }
 
@@ -45,7 +46,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(InvalidRoleName),
-                Description = string.Format(LocalizedFrameworkMessages.InvalidRoleName, role)
+                Description = string.Format(IdentityErrorDescriberMessages.InvalidRoleName, role)
             };
         }
 
@@ -54,7 +55,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(InvalidToken),
-                Description = LocalizedFrameworkMessages.InvalidToken
+                Description = IdentityErrorDescriberMessages.InvalidToken
             };
         }
 
@@ -63,7 +64,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(InvalidUserName),
-                Description = string.Format(LocalizedFrameworkMessages.InvalidUserName, userName)
+                Description = string.Format(IdentityErrorDescriberMessages.InvalidUserName, userName)
             };
         }
 
@@ -72,7 +73,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(LoginAlreadyAssociated),
-                Description = LocalizedFrameworkMessages.LoginAlreadyAssociated
+                Description = IdentityErrorDescriberMessages.LoginAlreadyAssociated
             };
         }
 
@@ -81,7 +82,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordMismatch),
-                Description = LocalizedFrameworkMessages.PasswordMismatch
+                Description = IdentityErrorDescriberMessages.PasswordMismatch
             };
         }
 
@@ -90,7 +91,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordRequiresDigit),
-                Description = LocalizedFrameworkMessages.PasswordRequiresDigit
+                Description = IdentityErrorDescriberMessages.PasswordRequiresDigit
             };
         }
 
@@ -99,7 +100,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordRequiresLower),
-                Description = LocalizedFrameworkMessages.PasswordRequiresLower
+                Description = IdentityErrorDescriberMessages.PasswordRequiresLower
             };
         }
 
@@ -108,7 +109,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordRequiresNonAlphanumeric),
-                Description = LocalizedFrameworkMessages.PasswordRequiresNonAlphanumeric
+                Description = IdentityErrorDescriberMessages.PasswordRequiresNonAlphanumeric
             };
         }
 
@@ -117,7 +118,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordRequiresUniqueChars),
-                Description = string.Format(LocalizedFrameworkMessages.PasswordRequiresUniqueChars, uniqueChars)
+                Description = string.Format(IdentityErrorDescriberMessages.PasswordRequiresUniqueChars, uniqueChars)
             };
         }
 
@@ -126,7 +127,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordRequiresUpper),
-                Description = LocalizedFrameworkMessages.PasswordRequiresUpper
+                Description = IdentityErrorDescriberMessages.PasswordRequiresUpper
             };
         }
 
@@ -135,7 +136,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordTooShort),
-                Description = string.Format(LocalizedFrameworkMessages.PasswordTooShort, length)
+                Description = string.Format(IdentityErrorDescriberMessages.PasswordTooShort, length)
             };
         }
 
@@ -144,7 +145,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(UserAlreadyHasPassword),
-                Description = LocalizedFrameworkMessages.UserAlreadyHasPassword
+                Description = IdentityErrorDescriberMessages.UserAlreadyHasPassword
             };
         }
 
@@ -153,7 +154,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(UserAlreadyInRole),
-                Description = string.Format(LocalizedFrameworkMessages.UserAlreadyInRole, role)
+                Description = string.Format(IdentityErrorDescriberMessages.UserAlreadyInRole, role)
             };
         }
 
@@ -162,7 +163,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(UserNotInRole),
-                Description = string.Format(LocalizedFrameworkMessages.UserNotInRole, role)
+                Description = string.Format(IdentityErrorDescriberMessages.UserNotInRole, role)
             };
         }
 
@@ -171,7 +172,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(UserLockoutNotEnabled),
-                Description = LocalizedFrameworkMessages.UserLockoutNotEnabled
+                Description = IdentityErrorDescriberMessages.UserLockoutNotEnabled
             };
         }
 
@@ -180,7 +181,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(RecoveryCodeRedemptionFailed),
-                Description = LocalizedFrameworkMessages.RecoveryCodeRedemptionFailed
+                Description = IdentityErrorDescriberMessages.RecoveryCodeRedemptionFailed
             };
         }
 
@@ -189,7 +190,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(ConcurrencyFailure),
-                Description = LocalizedFrameworkMessages.ConcurrencyFailure
+                Description = IdentityErrorDescriberMessages.ConcurrencyFailure
             };
         }
 
@@ -198,7 +199,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(DefaultError),
-                Description = LocalizedFrameworkMessages.DefaultIdentityError
+                Description = IdentityErrorDescriberMessages.DefaultIdentityError
             };
         }
     }

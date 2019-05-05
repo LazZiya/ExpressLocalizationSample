@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using LazZiya.Localization.Resources;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
 using System;
 using System.Reflection;
@@ -41,27 +42,38 @@ namespace LazZiya.Localization
             // ModelBinding Error Messages Localization
             builder.AddMvcOptions(o =>
             {
-                o.ModelBindingMessageProvider.SetAttemptedValueIsInvalidAccessor((x, y) => string.Format(LocalizedFrameworkMessages.AttemptedValueIsInvalid, x, y));
+                o.ModelBindingMessageProvider.SetAttemptedValueIsInvalidAccessor((x, y) 
+                    => string.Format(ModelBindingMessages.AttemptedValueIsInvalid, x, y));
 
-                o.ModelBindingMessageProvider.SetMissingBindRequiredValueAccessor((x) => string.Format(LocalizedFrameworkMessages.MissingBindRequiredValue, x));
+                o.ModelBindingMessageProvider.SetMissingBindRequiredValueAccessor((x) 
+                    => string.Format(ModelBindingMessages.MissingBindRequiredValue, x));
 
-                o.ModelBindingMessageProvider.SetMissingKeyOrValueAccessor(() => LocalizedFrameworkMessages.MissingKeyOrValue);
+                o.ModelBindingMessageProvider.SetMissingKeyOrValueAccessor(() 
+                    => ModelBindingMessages.MissingKeyOrValue);
 
-                o.ModelBindingMessageProvider.SetMissingRequestBodyRequiredValueAccessor(() => LocalizedFrameworkMessages.MissingRequestBodyRequiredValue);
+                o.ModelBindingMessageProvider.SetMissingRequestBodyRequiredValueAccessor(() 
+                    => ModelBindingMessages.MissingRequestBodyRequiredValue);
 
-                o.ModelBindingMessageProvider.SetNonPropertyAttemptedValueIsInvalidAccessor((x) => string.Format(LocalizedFrameworkMessages.NonPropertyAttemptedValueIsInvalid, x));
+                o.ModelBindingMessageProvider.SetNonPropertyAttemptedValueIsInvalidAccessor((x) 
+                    => string.Format(ModelBindingMessages.NonPropertyAttemptedValueIsInvalid, x));
 
-                o.ModelBindingMessageProvider.SetNonPropertyUnknownValueIsInvalidAccessor(() => LocalizedFrameworkMessages.NonPropertyUnknownValueIsInvalid);
+                o.ModelBindingMessageProvider.SetNonPropertyUnknownValueIsInvalidAccessor(() 
+                    => ModelBindingMessages.NonPropertyUnknownValueIsInvalid);
 
-                o.ModelBindingMessageProvider.SetNonPropertyValueMustBeANumberAccessor(() => LocalizedFrameworkMessages.NonPropertyValueMustBeANumber);
+                o.ModelBindingMessageProvider.SetNonPropertyValueMustBeANumberAccessor(() 
+                    => ModelBindingMessages.NonPropertyValueMustBeANumber);
 
-                o.ModelBindingMessageProvider.SetUnknownValueIsInvalidAccessor((x) => string.Format(LocalizedFrameworkMessages.UnknownValueIsInvalid, x));
+                o.ModelBindingMessageProvider.SetUnknownValueIsInvalidAccessor((x) 
+                    => string.Format(ModelBindingMessages.UnknownValueIsInvalid, x));
 
-                o.ModelBindingMessageProvider.SetValueIsInvalidAccessor((x) => string.Format(LocalizedFrameworkMessages.ValueIsInvalid, x));
+                o.ModelBindingMessageProvider.SetValueIsInvalidAccessor((x) 
+                    => string.Format(ModelBindingMessages.ValueIsInvalid, x));
 
-                o.ModelBindingMessageProvider.SetValueMustBeANumberAccessor((x) => string.Format(LocalizedFrameworkMessages.ValueMustBeANumber, x));
+                o.ModelBindingMessageProvider.SetValueMustBeANumberAccessor((x) 
+                    => string.Format(ModelBindingMessages.ValueMustBeANumber, x));
 
-                o.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor((x) => string.Format(LocalizedFrameworkMessages.ValueMustNotBeNull, x));
+                o.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor((x) 
+                    => string.Format(ModelBindingMessages.ValueMustNotBeNull, x));
             });
 
             return builder;
