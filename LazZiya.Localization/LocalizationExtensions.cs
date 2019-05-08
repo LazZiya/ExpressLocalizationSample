@@ -1,5 +1,4 @@
-﻿using LazZiya.Localization.Resources;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
 using System;
 using System.Reflection;

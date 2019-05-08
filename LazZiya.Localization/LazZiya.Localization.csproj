@@ -50,10 +50,6 @@
     <None Include="files\license.txt" Pack="true" PackagePath="" />
   </ItemGroup>
   
-  <ItemGroup>
-    <ProjectReference Include="..\..\Localization.Resources\LazZiya.Localization.Resources\LazZiya.Localization.Resources.csproj" />
-  </ItemGroup>
-  
   <ProjectExtensions>
     <VisualStudio>
       <UserProperties BuildVersion_BuildVersioningStyle="None.None.Increment.DeltaBaseYearDayOfYear" BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2000/1/1" BuildVersion_UseUniversalClock="True" BuildVersion_UpdateAssemblyVersion="True" />
