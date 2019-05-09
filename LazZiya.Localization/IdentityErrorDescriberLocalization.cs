@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using LazZiya.Localization.ResourceFiles;
 
 namespace LazZiya.Localization
 {
@@ -9,7 +10,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(DuplicateEmail),
-                Description = $"Email '{email}' already exists"
+                Description = string.Format(IdentityErrorDescriberResource.DuplicateEmail, email)
             };
         }
 
@@ -18,7 +19,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(DuplicateUserName),
-                Description = $"User name '{userName}' already exists"
+                Description = string.Format(IdentityErrorDescriberResource.DuplicateUserName, userName)
             };
         }
 
@@ -27,7 +28,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(InvalidEmail),
-                Description = $"Email '{email}' is invalid"
+                Description = string.Format(IdentityErrorDescriberResource.InvalidEmail, email)
             };
         }
 
@@ -36,7 +37,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(DuplicateRoleName),
-                Description = $"Role name '{role}' already exists"
+                Description = string.Format(IdentityErrorDescriberResource.DuplicateRoleName, role)
             };
         }
 
@@ -45,7 +46,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(InvalidRoleName),
-                Description = $"Role name '{role}' is invalid"
+                Description = string.Format(IdentityErrorDescriberResource.InvalidRoleName, role)
             };
         }
 
@@ -54,7 +55,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(InvalidToken),
-                Description = "Invalid token"
+                Description = IdentityErrorDescriberResource.InvalidToken
             };
         }
 
@@ -63,7 +64,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(InvalidUserName),
-                Description = $"User name '{userName}' is invalid"
+                Description = string.Format(IdentityErrorDescriberResource.InvalidUserName, userName)
             };
         }
 
@@ -72,7 +73,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(LoginAlreadyAssociated),
-                Description = $"An external login is already associated with this account"
+                Description = IdentityErrorDescriberResource.LoginAlreadyAssociated
             };
         }
 
@@ -81,7 +82,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordMismatch),
-                Description = "The provided password dosen't match your saved password"
+                Description = IdentityErrorDescriberResource.PasswordMismatch
             };
         }
 
@@ -90,7 +91,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordRequiresDigit),
-                Description = $"The password must contain digits (0 - 9)"
+                Description = IdentityErrorDescriberResource.PasswordRequiresDigit
             };
         }
 
@@ -99,7 +100,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordRequiresLower),
-                Description = "The password must contain lower case letters (a - z)"
+                Description = IdentityErrorDescriberResource.PasswordRequiresLower
             };
         }
 
@@ -108,7 +109,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordRequiresNonAlphanumeric),
-                Description = "The password must contain non-alphanumeric characters (! + . - ? ...)"
+                Description = IdentityErrorDescriberResource.PasswordRequiresNonAlphanumeric
             };
         }
 
@@ -117,7 +118,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordRequiresUniqueChars),
-                Description = $"The password must contain '{uniqueChars}' unique chracters"
+                Description = string.Format(IdentityErrorDescriberResource.PasswordRequiresUniqueChars, uniqueChars)
             };
         }
 
@@ -126,7 +127,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordRequiresUpper),
-                Description = "The password must contain upper case letters (A - Z)"
+                Description = IdentityErrorDescriberResource.PasswordRequiresUpper
             };
         }
 
@@ -135,7 +136,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(PasswordTooShort),
-                Description = $"The password must be at least '{length}' character long"
+                Description = string.Format(IdentityErrorDescriberResource.PasswordTooShort, length)
             };
         }
 
@@ -144,7 +145,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(UserAlreadyHasPassword),
-                Description = "User already has a password"
+                Description = IdentityErrorDescriberResource.UserAlreadyHasPassword
             };
         }
 
@@ -153,7 +154,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(UserAlreadyInRole),
-                Description = $"The user is already in '{role}' role"
+                Description = string.Format(IdentityErrorDescriberResource.UserAlreadyInRole, role)
             };
         }
 
@@ -162,7 +163,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(UserNotInRole),
-                Description = $"User is not in '{role}' role"
+                Description = string.Format(IdentityErrorDescriberResource.UserNotInRole, role)
             };
         }
 
@@ -171,7 +172,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(UserLockoutNotEnabled),
-                Description = "User lockout is not enabled"
+                Description = IdentityErrorDescriberResource.UserLockoutNotEnabled
             };
         }
 
@@ -180,7 +181,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(RecoveryCodeRedemptionFailed),
-                Description = "Recovery code was not redeemed"
+                Description = IdentityErrorDescriberResource.RecoveryCodeRedemptionFailed
             };
         }
 
@@ -189,7 +190,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(ConcurrencyFailure),
-                Description = "Concurrency failure"
+                Description = IdentityErrorDescriberResource.ConcurrencyFailure
             };
         }
 
@@ -198,7 +199,7 @@ namespace LazZiya.Localization
             return new IdentityError
             {
                 Code = nameof(DefaultError),
-                Description = "Identity system error"
+                Description = IdentityErrorDescriberResource.DefaultIdentityError
             };
         }
     }

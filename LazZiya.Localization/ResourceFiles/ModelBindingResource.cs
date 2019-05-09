@@ -1,0 +1,4 @@
+﻿namespace LazZiya.Localization.ResourceFiles
+{
+    
+}

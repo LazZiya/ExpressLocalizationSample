@@ -8,9 +8,9 @@
     <Description>Localization package for dotnet core web appliations</Description>
     <Copyright>Ziyad.info</Copyright>
     <PackageProjectUrl>http://www.ziyad.info/en/articles/33-LazZiya_Localization</PackageProjectUrl>
-    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <PackageLicenseFile>files\license.txt</PackageLicenseFile>
     <PackageIcon>files\icon.png</PackageIcon>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageTags>asp.net, core, razor, mvc, localization, globalization</PackageTags>
     <PackageReleaseNotes>
       - Localization settings for dotnet core web applications using razore pages and route based culture settings.
@@ -34,6 +34,19 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="2.0.0" Exclude="analyzers" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="ResourceFiles\IdentityErrorDescriberResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IdentityErrorDescriberResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ResourceFiles\ModelBindingResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ModelBindingResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
   <!-- 
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp1.0' OR '$(TargetFramework)' == 'netcoreapp1.1'">
     <dependency id="Microsoft.NETCore.App" version="1.0.5" exclude="Build,Analyzers" />
@@ -41,13 +54,39 @@
   -->
   
   <ItemGroup>
-    <None Update="files\icon.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="files\icon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="files\license.txt" Pack="true" PackagePath="" />
+    <EmbeddedResource Update="ResourceFiles\DataAnnotationsResource.ar.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\DataAnnotationsResource.tr.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\ModelBindingResource.tr.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\ModelBindingResource.ar.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\ModelBindingResource.resx">
+      <LastGenOutput>ModelBindingResource.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\IdentityErrorDescriberResource.ar.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\IdentityErrorDescriberResource.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>IdentityErrorDescriberResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\IdentityErrorDescriberResource.tr.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\ViewLocalizationResource.ar.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\ViewLocalizationResource.tr.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   
   <ProjectExtensions>
