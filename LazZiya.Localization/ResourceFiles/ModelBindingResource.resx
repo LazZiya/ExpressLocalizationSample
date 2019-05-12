@@ -117,47 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AttemptedValueIsInvalid" xml:space="preserve">
+  <data name="AttemptedValueIsInvalidAccessor" xml:space="preserve">
     <value>The value '{0}' is not valid for '{1}'</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="MissingBindRequiredValue" xml:space="preserve">
+  <data name="MissingBindRequiredValueAccessor" xml:space="preserve">
     <value>A value for the '{0}' property was not provided</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="MissingKeyOrValue" xml:space="preserve">
+  <data name="MissingKeyOrValueAccessor" xml:space="preserve">
     <value>A value is required</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="MissingRequestBodyRequiredValue" xml:space="preserve">
+  <data name="MissingRequestBodyRequiredValueAccessor" xml:space="preserve">
     <value>A non-empty request body is required</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="NonPropertyAttemptedValueIsInvalid" xml:space="preserve">
+  <data name="NonPropertyAttemptedValueIsInvalidAccessor" xml:space="preserve">
     <value>The value '{0}' is not valid</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="NonPropertyUnknownValueIsInvalid" xml:space="preserve">
+  <data name="NonPropertyUnknownValueIsInvalidAccessor" xml:space="preserve">
     <value>The supplied value is invalid</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="NonPropertyValueMustBeANumber" xml:space="preserve">
+  <data name="NonPropertyValueMustBeANumberAccessor" xml:space="preserve">
     <value>The field must be a number</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="UnknownValueIsInvalid" xml:space="preserve">
+  <data name="UnknownValueIsInvalidAccessor" xml:space="preserve">
     <value>The supplied value is invalid for '{0}'</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="ValueIsInvalid" xml:space="preserve">
+  <data name="ValueIsInvalidAccessor" xml:space="preserve">
     <value>The value '{0}' is invalid</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="ValueMustBeANumber" xml:space="preserve">
+  <data name="ValueMustBeANumberAccessor" xml:space="preserve">
     <value>The field '{0}' must be a number</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="ValueMustNotBeNull" xml:space="preserve">
+  <data name="ValueMustNotBeNullAccessor" xml:space="preserve">
     <value>The field '{0}' must not be null</value>
     <comment>ModelBinding</comment>
   </data>

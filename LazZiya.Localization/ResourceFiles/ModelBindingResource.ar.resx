@@ -117,47 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AttemptedValueIsInvalid" xml:space="preserve">
+  <data name="AttemptedValueIsInvalidAccessor" xml:space="preserve">
     <value>القيمة '{0}' غير مقبولة في الحقل '{1}'</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="MissingBindRequiredValue" xml:space="preserve">
+  <data name="MissingBindRequiredValueAccessor" xml:space="preserve">
     <value>لا يوجد قيمة للحقل '{0}'</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="MissingKeyOrValue" xml:space="preserve">
+  <data name="MissingKeyOrValueAccessor" xml:space="preserve">
     <value>يجب إعطاء قيمة</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="MissingRequestBodyRequiredValue" xml:space="preserve">
+  <data name="MissingRequestBodyRequiredValueAccessor" xml:space="preserve">
     <value>بنية الطلب لا يمكن أن تكون فارغة</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="NonPropertyAttemptedValueIsInvalid" xml:space="preserve">
+  <data name="NonPropertyAttemptedValueIsInvalidAccessor" xml:space="preserve">
     <value>القيمة '{0}' غير مقبولة</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="NonPropertyUnknownValueIsInvalid" xml:space="preserve">
+  <data name="NonPropertyUnknownValueIsInvalidAccessor" xml:space="preserve">
     <value>القيمة المعطاة غير مقبولة</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="NonPropertyValueMustBeANumber" xml:space="preserve">
+  <data name="NonPropertyValueMustBeANumberAccessor" xml:space="preserve">
     <value>يجب أن يكون الحقل رقما</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="UnknownValueIsInvalid" xml:space="preserve">
+  <data name="UnknownValueIsInvalidAccessor" xml:space="preserve">
     <value>القيمة المعطاة غير مقبولة في الحقل '{0}'</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="ValueIsInvalid" xml:space="preserve">
+  <data name="ValueIsInvalidAccessor" xml:space="preserve">
     <value>القيمة '{0}' غير مقبولة</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="ValueMustBeANumber" xml:space="preserve">
+  <data name="ValueMustBeANumberAccessor" xml:space="preserve">
     <value>يجب أن يكون الحقل '{0}' رقما</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="ValueMustNotBeNull" xml:space="preserve">
+  <data name="ValueMustNotBeNullAccessor" xml:space="preserve">
     <value>يجب أن لا يكون الحقل '{0}' خاليا</value>
     <comment>ModelBinding</comment>
   </data>

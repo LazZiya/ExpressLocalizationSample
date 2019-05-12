@@ -63,99 +63,99 @@ namespace LazZiya.Localization.ResourceFiles {
         /// <summary>
         ///   Looks up a localized string similar to The value &apos;{0}&apos; is not valid for &apos;{1}&apos;.
         /// </summary>
-        public static string AttemptedValueIsInvalid {
+        public static string AttemptedValueIsInvalidAccessor {
             get {
-                return ResourceManager.GetString("AttemptedValueIsInvalid", resourceCulture);
+                return ResourceManager.GetString("AttemptedValueIsInvalidAccessor", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to A value for the &apos;{0}&apos; property was not provided.
         /// </summary>
-        public static string MissingBindRequiredValue {
+        public static string MissingBindRequiredValueAccessor {
             get {
-                return ResourceManager.GetString("MissingBindRequiredValue", resourceCulture);
+                return ResourceManager.GetString("MissingBindRequiredValueAccessor", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to A value is required.
         /// </summary>
-        public static string MissingKeyOrValue {
+        public static string MissingKeyOrValueAccessor {
             get {
-                return ResourceManager.GetString("MissingKeyOrValue", resourceCulture);
+                return ResourceManager.GetString("MissingKeyOrValueAccessor", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to A non-empty request body is required.
         /// </summary>
-        public static string MissingRequestBodyRequiredValue {
+        public static string MissingRequestBodyRequiredValueAccessor {
             get {
-                return ResourceManager.GetString("MissingRequestBodyRequiredValue", resourceCulture);
+                return ResourceManager.GetString("MissingRequestBodyRequiredValueAccessor", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The value &apos;{0}&apos; is not valid.
         /// </summary>
-        public static string NonPropertyAttemptedValueIsInvalid {
+        public static string NonPropertyAttemptedValueIsInvalidAccessor {
             get {
-                return ResourceManager.GetString("NonPropertyAttemptedValueIsInvalid", resourceCulture);
+                return ResourceManager.GetString("NonPropertyAttemptedValueIsInvalidAccessor", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The supplied value is invalid.
         /// </summary>
-        public static string NonPropertyUnknownValueIsInvalid {
+        public static string NonPropertyUnknownValueIsInvalidAccessor {
             get {
-                return ResourceManager.GetString("NonPropertyUnknownValueIsInvalid", resourceCulture);
+                return ResourceManager.GetString("NonPropertyUnknownValueIsInvalidAccessor", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The field must be a number.
         /// </summary>
-        public static string NonPropertyValueMustBeANumber {
+        public static string NonPropertyValueMustBeANumberAccessor {
             get {
-                return ResourceManager.GetString("NonPropertyValueMustBeANumber", resourceCulture);
+                return ResourceManager.GetString("NonPropertyValueMustBeANumberAccessor", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The supplied value is invalid for &apos;{0}&apos;.
         /// </summary>
-        public static string UnknownValueIsInvalid {
+        public static string UnknownValueIsInvalidAccessor {
             get {
-                return ResourceManager.GetString("UnknownValueIsInvalid", resourceCulture);
+                return ResourceManager.GetString("UnknownValueIsInvalidAccessor", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The value &apos;{0}&apos; is invalid.
         /// </summary>
-        public static string ValueIsInvalid {
+        public static string ValueIsInvalidAccessor {
             get {
-                return ResourceManager.GetString("ValueIsInvalid", resourceCulture);
+                return ResourceManager.GetString("ValueIsInvalidAccessor", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The field &apos;{0}&apos; must be a number.
         /// </summary>
-        public static string ValueMustBeANumber {
+        public static string ValueMustBeANumberAccessor {
             get {
-                return ResourceManager.GetString("ValueMustBeANumber", resourceCulture);
+                return ResourceManager.GetString("ValueMustBeANumberAccessor", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The field &apos;{0}&apos; must not be null.
         /// </summary>
-        public static string ValueMustNotBeNull {
+        public static string ValueMustNotBeNullAccessor {
             get {
-                return ResourceManager.GetString("ValueMustNotBeNull", resourceCulture);
+                return ResourceManager.GetString("ValueMustNotBeNullAccessor", resourceCulture);
             }
         }
     }

@@ -117,7 +117,85 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Test string" xml:space="preserve">
-    <value>Deneme metnidir</value>
+  <data name="&lt;strong&gt;The Development environment shouldn't be enabled for deployed applications.&lt;/strong&gt; It can result in displaying sensitive information from exceptions to end users. For local debugging, enable the &lt;strong&gt;Development&lt;/strong&gt; environment by setting the &lt;strong&gt;ASPNETCORE_ENVIRONMENT&lt;/strong&gt; environment variable to &lt;strong&gt;Development&lt;/strong&gt; and restarting the app" xml:space="preserve">
+    <value>&lt;strong&gt;Geliştime modu yayınlanmış uygulama için aktif olmamalı.&lt;/strong&gt; Hata ekranları hassas bilgileri son kullanıcılara gösterebilir. Yerel makinede hata ayıklamak için &lt;strong&gt;Geliştirme&lt;/strong&gt; modunu açmak için &lt;strong&gt;ASPNETCORE_ENVIRONMENT&lt;/strong&gt; değişken değeri &lt;strong&gt;Development&lt;/strong&gt; olarak ayarlanıp uygulama yeniden başlatılmalı</value>
+  </data>
+  <data name="Accept" xml:space="preserve">
+    <value>Kabul et</value>
+  </data>
+  <data name="An error occurred while processing your request" xml:space="preserve">
+    <value>İstek yerine getirilirken bir hata oluştu</value>
+  </data>
+  <data name="Create a new account" xml:space="preserve">
+    <value>Yeni hesap oluştur</value>
+  </data>
+  <data name="Development Mode" xml:space="preserve">
+    <value>Geliştirme modu</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="Forgot your password?" xml:space="preserve">
+    <value>Şifreyi unuttum</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Merhaba</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Ana sayfa</value>
+  </data>
+  <data name="Home page" xml:space="preserve">
+    <value>Ana sayfa</value>
+  </data>
+  <data name="LazZiya.ExpressLocalization Sample Project" xml:space="preserve">
+    <value>LazZiya.ExpressLocalization Örnek Proje</value>
+  </data>
+  <data name="Learn about &lt;a href='https://docs.microsoft.com/aspnet/core'&gt;building Web apps with ASP.NET Core&lt;/a&gt;" xml:space="preserve">
+    <value>&lt;a href='https://docs.microsoft.com/aspnet/core\'&gt;ASP.Net Core ile web uygulama geliştirme&lt;/a&gt; hakkında öğren</value>
+  </data>
+  <data name="Learn More" xml:space="preserve">
+    <value>Daha fazla öğren</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Giriş</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Gizlilik</value>
+  </data>
+  <data name="Privacy Policy" xml:space="preserve">
+    <value>Gizlilik Politikası</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Kaydol</value>
+  </data>
+  <data name="Register as a new user" xml:space="preserve">
+    <value>Yeni kullanıcı olarak kaydol</value>
+  </data>
+  <data name="Request ID" xml:space="preserve">
+    <value>İstek kimlik numarası</value>
+  </data>
+  <data name="Swapping to the &lt;strong&gt;Development&lt;/strong&gt; environment displays detailed information about the error that occurred" xml:space="preserve">
+    <value>&lt;strong&gt;Geliştirme&lt;/strong&gt; ortamına geçmek oluşan hata hakkında daha fazla bilgi gösterir</value>
+  </data>
+  <data name="There are no external authentication services configured. See &lt;a href='https://go.microsoft.com/fwlink/?LinkID=532715'&gt;this article&lt;/a&gt; for details on setting up this ASP.NET application to support logging in via external services" xml:space="preserve">
+    <value>Ayarlanmış harici giriş hizmeti sağlayıcısı bulunmamaktadır. Bu uygulamanın dış giriş hizmet sağlayıcılarını tanımlamak için &lt;a href='https://go.microsoft.com/fwlink/?LinkID=532715'&gt;bu makaleye bak&lt;/a&gt;</value>
+  </data>
+  <data name="Use a local account to log in" xml:space="preserve">
+    <value>Giriş için yerel hesap kullan</value>
+  </data>
+  <data name="Use another service to log in" xml:space="preserve">
+    <value>Giriş için başka hizmet kullan</value>
+  </data>
+  <data name="Use this page to detail your site's privacy policy" xml:space="preserve">
+    <value>Sitenin gizlilik politikasını detaylandırmak için bu sayfayı kullan</value>
+  </data>
+  <data name="Use this space to summarize your privacy and cookie use policy" xml:space="preserve">
+    <value>Bu alanı sitenin gizlilik ve çerez kullanma politikasını özetlemek için kullan</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Hoşgeldin</value>
   </data>
 </root>

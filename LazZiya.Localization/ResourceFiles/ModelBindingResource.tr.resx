@@ -117,47 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AttemptedValueIsInvalid" xml:space="preserve">
+  <data name="AttemptedValueIsInvalidAccessor" xml:space="preserve">
     <value>'{0}' değeri '{1}' alanı için geçerli değil</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="MissingBindRequiredValue" xml:space="preserve">
+  <data name="MissingBindRequiredValueAccessor" xml:space="preserve">
     <value>'{0}' alanı değer içermiyor</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="MissingKeyOrValue" xml:space="preserve">
+  <data name="MissingKeyOrValueAccessor" xml:space="preserve">
     <value>Değer gerekli</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="MissingRequestBodyRequiredValue" xml:space="preserve">
+  <data name="MissingRequestBodyRequiredValueAccessor" xml:space="preserve">
     <value>İstek gövdesi boş olmamalı</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="NonPropertyAttemptedValueIsInvalid" xml:space="preserve">
+  <data name="NonPropertyAttemptedValueIsInvalidAccessor" xml:space="preserve">
     <value>'{0}' değeri geçerli değil</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="NonPropertyUnknownValueIsInvalid" xml:space="preserve">
+  <data name="NonPropertyUnknownValueIsInvalidAccessor" xml:space="preserve">
     <value>Verilen değer geçerli değil</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="NonPropertyValueMustBeANumber" xml:space="preserve">
+  <data name="NonPropertyValueMustBeANumberAccessor" xml:space="preserve">
     <value>Alan rakam olmalı</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="UnknownValueIsInvalid" xml:space="preserve">
+  <data name="UnknownValueIsInvalidAccessor" xml:space="preserve">
     <value>'{0}' alan değeri geçerli değil</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="ValueIsInvalid" xml:space="preserve">
+  <data name="ValueIsInvalidAccessor" xml:space="preserve">
     <value>'{0}' değeri geçerli değil</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="ValueMustBeANumber" xml:space="preserve">
+  <data name="ValueMustBeANumberAccessor" xml:space="preserve">
     <value>'{0}' alanı rakam olmalı</value>
     <comment>ModelBinding</comment>
   </data>
-  <data name="ValueMustNotBeNull" xml:space="preserve">
+  <data name="ValueMustNotBeNullAccessor" xml:space="preserve">
     <value>'{0}' alanı boş olmamalı</value>
     <comment>ModelBinding</comment>
   </data>

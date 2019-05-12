@@ -125,6 +125,12 @@
     <value>'{0}' alanı '{1}' alanı ile aynı olmalı</value>
     <comment>DataAnnotations</comment>
   </data>
+  <data name="Confirm password" xml:space="preserve">
+    <value>Şifreyi tekrarla</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Eposta</value>
+  </data>
   <data name="Email address is not valid" xml:space="preserve">
     <value>Eposta doğru değil</value>
     <comment>DataAnnotations</comment>
@@ -132,6 +138,9 @@
   <data name="ID" xml:space="preserve">
     <value>Kimlik</value>
     <comment>DisplayName</comment>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Şifre</value>
   </data>
   <data name="Phone number is invalid" xml:space="preserve">
     <value>Telefon numarası geçerli değil</value>
@@ -141,8 +150,14 @@
     <value>Lütfen bu alanda sadece rakam girin.</value>
     <comment>DataAnnotations</comment>
   </data>
+  <data name="Remember me?" xml:space="preserve">
+    <value>Beni hatırla?</value>
+  </data>
   <data name="The '{0}' must be at least '{2}' and at max '{1}' characters long" xml:space="preserve">
     <value>'{0}' en az  '{2}', en fazla '{1}' karakter olmalı.</value>
     <comment>DataAnnotations</comment>
+  </data>
+  <data name="The password and confirmation password do not match." xml:space="preserve">
+    <value>Şifre ve şifrenin tekrarı birbiriyle eşleşmiyor</value>
   </data>
 </root>
