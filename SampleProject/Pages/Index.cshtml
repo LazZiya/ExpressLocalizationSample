@@ -8,3 +8,28 @@
     <h1 class="display-4">@_loc.Text("Welcome")</h1>
     <p>@_loc.Text("Learn about <a href='https://docs.microsoft.com/aspnet/core'>building Web apps with ASP.NET Core</a>").</p>
 </div>
+
+
+<form method="post" class="col-3">
+    <div class="form-group">
+        <label asp-for="Test.ID"></label>
+        <input asp-for="Test.ID" class="form-control" />
+        <span asp-validation-for="Test.ID"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Test.Name"></label>
+        <input asp-for="Test.Name" class="form-control" />
+        <span asp-validation-for="Test.Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Test.Price"></label>
+        <input asp-for="Test.Price" class="form-control" />
+        <span asp-validation-for="Test.Price"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Test.Date"></label>
+        <input asp-for="Test.Date" class="form-control" />
+        <span asp-validation-for="Test.Date"></span>
+    </div>
+    <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+</form>

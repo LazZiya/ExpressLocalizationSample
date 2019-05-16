@@ -12,6 +12,7 @@ using LazZiya.Localization.Resources;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using LazZiya.ExpressLocalization;
+using System;
 
 namespace SampleProject
 {
@@ -39,9 +40,9 @@ namespace SampleProject
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
-                //Localization for identity error messages
-                //.AddErrorDescriber<IdentityErrorDescriberLocalization>() 
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddAntiforgery();
 
             var cultures = new CultureInfo[]
             {
@@ -51,35 +52,11 @@ namespace SampleProject
             };
 
             services.AddMvc()
-                //Configure below localization settings with one step:
-                //- Add supported cultures
-                //- Add DataAnnotation locaization
-                //- Add ModelBinding localization
-                //- Define global route template for culture parameter
-                //- Configure Request localization
-                //- Configure view localization 
-                //- Register CultureLocalizer for using shared resources for string loclization in views
-                .AddExpressLocalizationOptions(ops =>
+                .AddExpressLocalization<ViewLocalizationResource, DataAnnotationsLocalizationResource, ModelBindingLocalizationResource, IdentityErrorsLocalizationResource>(ops =>
                 {
-                    ops.LocalizationOptions = lo => lo.ResourcesPath = "";
-
-                    ops.LocalizationResourcesTypes = lr =>
-                    {
-                        lr.DataAnnotations = typeof(DataAnnotationsResource);
-                        lr.IdentityDescriber = typeof(IdentityErrorDescriberResource);
-                        lr.ModelBinding = typeof(ModelBindingResource);
-                        lr.Views = typeof(ViewLocalizationResource);
-                    };
-                    
-                    ops.RequestLocalizationOptions = rlo =>
-                    {
-                        rlo.SupportedCultures = cultures;
-                        rlo.SupportedUICultures = cultures;
-                        rlo.DefaultRequestCulture = new RequestCulture("en");
-                        rlo.RequestCultureProviders.Insert(0, new RouteValueRequestCultureProvider(cultures, "en"));
-                    };
-
-                    ops.MvcOptions = mvcOps => { };
+                    ops.SupportedCultures = cultures;
+                    ops.SupportedUICultures = cultures;
+                    ops.DefaultRequestCulture = new RequestCulture("en");
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
