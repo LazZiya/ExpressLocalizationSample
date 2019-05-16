@@ -52,11 +52,15 @@ namespace SampleProject
             };
 
             services.AddMvc()
-                .AddExpressLocalization<ViewLocalizationResource, DataAnnotationsLocalizationResource, ModelBindingLocalizationResource, IdentityErrorsLocalizationResource>(ops =>
+                .AddExpressLocalization<ViewLocalizationResource, DataAnnotationsLocalizationResource, ModelBindingLocalizationResource, IdentityErrorsLocalizationResource>(
+                exOps =>
                 {
-                    ops.SupportedCultures = cultures;
-                    ops.SupportedUICultures = cultures;
-                    ops.DefaultRequestCulture = new RequestCulture("en");
+                    exOps.RequestLocalizationOptions = ops =>
+                    {
+                        ops.SupportedCultures = cultures;
+                        ops.SupportedUICultures = cultures;
+                        ops.DefaultRequestCulture = new RequestCulture("en");
+                    };
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
