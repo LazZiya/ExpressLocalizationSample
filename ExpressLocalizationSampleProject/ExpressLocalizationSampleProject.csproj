@@ -8,6 +8,7 @@
 
 
   <ItemGroup>
+    <PackageReference Include="LazZiya.ExpressLocalization" Version="1.0.0" />
     <PackageReference Include="LazZiya.TagHelpers" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
@@ -16,8 +17,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ExpressLocalization.Resources\LazZiya.ExpressLocalization.Resources\LazZiya.ExpressLocalization.Resources.csproj" />
-    <ProjectReference Include="..\..\ExpressLocalization\LazZiya.ExpressLocalization\LazZiya.ExpressLocalization.csproj" />
+    <ProjectReference Include="..\LazZiya.ExpressLocalization.Resources\LazZiya.ExpressLocalization.Resources.csproj" />
   </ItemGroup>
 
 </Project>
