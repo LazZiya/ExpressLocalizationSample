@@ -1,4 +1,0 @@
-﻿namespace LazZiya.Localization.ResourceFiles
-{
-    
-}
