@@ -473,4 +473,16 @@
     <value>{0} geçerli değil.</value>
     <comment>DataAnnotations: CustomValidationAttribute_ValidationError</comment>
   </data>
+  <data name="Confirm password" xml:space="preserve">
+    <value>Şifreyi tekarla</value>
+    <comment>DataAnnotations: Custom value</comment>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Eposta</value>
+    <comment>DataAnnotations: Custom value</comment>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Şifre</value>
+    <comment>DataAnnotations: Custom value</comment>
+  </data>
 </root>

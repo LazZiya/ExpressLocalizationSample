@@ -4,12 +4,12 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <UserSecretsId>aspnet-SampleProject-3775AD46-131B-4734-BC34-ADD75F8B5B52</UserSecretsId>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <TypeScriptToolsVersion>3.3</TypeScriptToolsVersion>
   </PropertyGroup>
 
 
   <ItemGroup>
     <PackageReference Include="LazZiya.ExpressLocalization" Version="1.0.0" />
-    <PackageReference Include="LazZiya.TagHelpers" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
@@ -17,6 +17,7 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\..\TagHelpers\LazZiya.TagHelpers\LazZiya.TagHelpers.csproj" />
     <ProjectReference Include="..\LazZiya.ExpressLocalization.Resources\LazZiya.ExpressLocalization.Resources.csproj" />
   </ItemGroup>
 

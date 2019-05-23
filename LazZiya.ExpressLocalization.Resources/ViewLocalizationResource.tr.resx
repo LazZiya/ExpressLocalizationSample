@@ -198,4 +198,14 @@
   <data name="Welcome" xml:space="preserve">
     <value>Hoşgeldin</value>
   </data>
+  <data name="Sample Form" xml:space="preserve">
+    <value>Örnek Form</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Gönder</value>
+  </data>
+  <data name="Please enter a valid number." xml:space="preserve">
+    <value>Lütfen geçerli bir sayı girin.</value>
+    <comment>Notice: int data types dosen't get data-val-number attribute, add it manually</comment>
+  </data>
 </root>

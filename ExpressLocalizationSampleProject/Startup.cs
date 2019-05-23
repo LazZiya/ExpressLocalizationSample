@@ -13,6 +13,8 @@ using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using LazZiya.ExpressLocalization;
 using System;
+using Microsoft.AspNetCore.Razor.TagHelpers;
+using ExpressLocalizationSampleProject.TagHelpers;
 
 namespace ExpressLocalizationSampleProject
 {
@@ -42,6 +44,8 @@ namespace ExpressLocalizationSampleProject
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            services.AddTransient<ITagHelperComponent, ClientSideValidationScriptsTagHelperComponent>();
+
             services.AddAntiforgery();
 
             var cultures = new CultureInfo[]
@@ -52,14 +56,13 @@ namespace ExpressLocalizationSampleProject
             };
 
             services.AddMvc()
-                .AddExpressLocalization<ExpressLocalizationResource, ViewLocalizationResource>(
-                exOps =>
+                .AddExpressLocalization<ExpressLocalizationResource, ViewLocalizationResource>(ops =>
                 {
-                    exOps.RequestLocalizationOptions = ops =>
+                    ops.RequestLocalizationOptions = o =>
                     {
-                        ops.SupportedCultures = cultures;
-                        ops.SupportedUICultures = cultures;
-                        ops.DefaultRequestCulture = new RequestCulture("en");
+                        o.SupportedCultures = cultures;
+                        o.SupportedUICultures = cultures;
+                        o.DefaultRequestCulture = new RequestCulture("en");
                     };
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

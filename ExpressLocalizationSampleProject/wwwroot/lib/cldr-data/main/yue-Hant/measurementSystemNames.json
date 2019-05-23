@@ -1,0 +1,21 @@
+{
+  "main": {
+    "yue-Hant": {
+      "identity": {
+        "version": {
+          "_number": "$Revision: 14771 $",
+          "_cldrVersion": "35.1"
+        },
+        "language": "yue",
+        "script": "Hant"
+      },
+      "localeDisplayNames": {
+        "measurementSystemNames": {
+          "metric": "公制",
+          "UK": "英制",
+          "US": "美制"
+        }
+      }
+    }
+  }
+}

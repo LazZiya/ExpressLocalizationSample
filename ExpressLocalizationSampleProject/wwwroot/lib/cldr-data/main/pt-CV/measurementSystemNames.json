@@ -1,0 +1,21 @@
+{
+  "main": {
+    "pt-CV": {
+      "identity": {
+        "version": {
+          "_number": "$Revision: 14771 $",
+          "_cldrVersion": "35.1"
+        },
+        "language": "pt",
+        "territory": "CV"
+      },
+      "localeDisplayNames": {
+        "measurementSystemNames": {
+          "metric": "métrico",
+          "UK": "inglês",
+          "US": "americano"
+        }
+      }
+    }
+  }
+}

@@ -117,7 +117,95 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Test string" xml:space="preserve">
-    <value>نص تجريبي</value>
+  <data name="&lt;strong&gt;The Development environment shouldn't be enabled for deployed applications.&lt;/strong&gt; It can result in displaying sensitive information from exceptions to end users. For local debugging, enable the &lt;strong&gt;Development&lt;/strong&gt; environment by setting the &lt;strong&gt;ASPNETCORE_ENVIRONMENT&lt;/strong&gt; environment variable to &lt;strong&gt;Development&lt;/strong&gt; and restarting the app" xml:space="preserve">
+    <value>&lt;strong&gt;Geliştime modu yayınlanmış uygulama için aktif olmamalı.&lt;/strong&gt; Hata ekranları hassas bilgileri son kullanıcılara gösterebilir. Yerel makinede hata ayıklamak için &lt;strong&gt;Geliştirme&lt;/strong&gt; modunu açmak için &lt;strong&gt;ASPNETCORE_ENVIRONMENT&lt;/strong&gt; değişken değeri &lt;strong&gt;Development&lt;/strong&gt; olarak ayarlanıp uygulama yeniden başlatılmalı</value>
+  </data>
+  <data name="Accept" xml:space="preserve">
+    <value>أوافق</value>
+  </data>
+  <data name="An error occurred while processing your request" xml:space="preserve">
+    <value>حدث خطأ أثناء تنفيذ الطلب</value>
+  </data>
+  <data name="Create a new account" xml:space="preserve">
+    <value>انشاء حساب جديد</value>
+  </data>
+  <data name="Development Mode" xml:space="preserve">
+    <value>وضع التطوير</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="Forgot your password?" xml:space="preserve">
+    <value>نسيت كلمة المرور؟</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>مرحبا</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="Home page" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="LazZiya.ExpressLocalization Sample Project" xml:space="preserve">
+    <value>مشروع مثال متعدد الثقافات</value>
+  </data>
+  <data name="Learn about &lt;a href='https://docs.microsoft.com/aspnet/core'&gt;building Web apps with ASP.NET Core&lt;/a&gt;" xml:space="preserve">
+    <value>تعرف على &lt;a href='https://docs.microsoft.com/aspnet/core'&gt; إنشاء تطبيقات الويب باستخدام ASP.NET Core &lt;/a&gt;</value>
+  </data>
+  <data name="Learn More" xml:space="preserve">
+    <value>تعرف على المزيد</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>دخول</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>الخصوصية</value>
+  </data>
+  <data name="Privacy Policy" xml:space="preserve">
+    <value>سياسة الخصوصية</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>تسجيل</value>
+  </data>
+  <data name="Register as a new user" xml:space="preserve">
+    <value>تسجيل كمستخدم جديد</value>
+  </data>
+  <data name="Request ID" xml:space="preserve">
+    <value>رقم الطلب</value>
+  </data>
+  <data name="Swapping to the &lt;strong&gt;Development&lt;/strong&gt; environment displays detailed information about the error that occurred" xml:space="preserve">
+    <value>يؤدي التبديل إلى بيئة &lt;strong&gt; التطوير &lt;/ strong&gt; إلى عرض معلومات مفصلة حول الخطأ الذي حدث</value>
+  </data>
+  <data name="There are no external authentication services configured. See &lt;a href='https://go.microsoft.com/fwlink/?LinkID=532715'&gt;this article&lt;/a&gt; for details on setting up this ASP.NET application to support logging in via external services" xml:space="preserve">
+    <value>لا توجد خدمات مصادقة خارجية مكونة. راجع &lt;a href='https://go.microsoft.com/fwlink/؟LinkID=532715'&gt; هذه المقالة &lt;/a&gt; للحصول على تفاصيل حول إعداد تطبيق ASP.NET لدعم تسجيل الدخول عبر الخدمات الخارجية</value>
+  </data>
+  <data name="Use a local account to log in" xml:space="preserve">
+    <value>استخدام حساب محلي لتسجيل الدخول</value>
+  </data>
+  <data name="Use another service to log in" xml:space="preserve">
+    <value>استخدم خدمة أخرى لتسجيل الدخول</value>
+  </data>
+  <data name="Use this page to detail your site's privacy policy" xml:space="preserve">
+    <value>استخدم هذه الصفحة لتوضيح سياسة الخصوصية لموقعك</value>
+  </data>
+  <data name="Use this space to summarize your privacy and cookie use policy" xml:space="preserve">
+    <value>استخدم هذه المساحة لتلخيص سياسة الخصوصية وملفات تعريف الارتباط</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>أهلا و سهلا</value>
+  </data>
+  <data name="Sample Form" xml:space="preserve">
+    <value>نموذج استمارة</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>إرسال</value>
+  </data>
+  <data name="Please enter a valid number." xml:space="preserve">
+    <value>يرجى دخول رقم صحيح.</value>
+    <comment>Notice: int data types dosen't get data-val-number attribute, add it manually</comment>
   </data>
 </root>

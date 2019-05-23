@@ -1,0 +1,20 @@
+{
+  "main": {
+    "mn": {
+      "identity": {
+        "version": {
+          "_number": "$Revision: 14817 $",
+          "_cldrVersion": "35.1"
+        },
+        "language": "mn"
+      },
+      "localeDisplayNames": {
+        "measurementSystemNames": {
+          "metric": "метрийн",
+          "UK": "ИБ",
+          "US": "АНУ"
+        }
+      }
+    }
+  }
+}

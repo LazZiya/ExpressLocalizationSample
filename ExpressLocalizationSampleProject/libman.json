@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "defaultProvider": "jsdelivr",
+  "libraries": [
+    {
+      "library": "cldrjs@0.5.1",
+      "destination": "wwwroot/lib/cldr"
+    },
+    {
+      "library": "cldr-data@35.1.0",
+      "destination": "wwwroot/lib/cldr-data"
+    },
+    {
+      "library": "globalize@1.4.2",
+      "destination": "wwwroot/lib/globalize"
+    }
+  ]
+}

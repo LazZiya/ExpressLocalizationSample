@@ -1,0 +1,21 @@
+{
+  "main": {
+    "ko-KP": {
+      "identity": {
+        "version": {
+          "_number": "$Revision: 14771 $",
+          "_cldrVersion": "35.1"
+        },
+        "language": "ko",
+        "territory": "KP"
+      },
+      "localeDisplayNames": {
+        "measurementSystemNames": {
+          "metric": "미터법",
+          "UK": "영국식",
+          "US": "미국식"
+        }
+      }
+    }
+  }
+}
