@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Localization;
 using LazZiya.ExpressLocalization;
 using System;
 using Microsoft.AspNetCore.Razor.TagHelpers;
-using ExpressLocalizationSampleProject.TagHelpers;
+using LazZiya.TagHelpers;
 
 namespace ExpressLocalizationSampleProject
 {
@@ -43,8 +43,6 @@ namespace ExpressLocalizationSampleProject
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-
-            services.AddTransient<ITagHelperComponent, ClientSideValidationScriptsTagHelperComponent>();
 
             services.AddAntiforgery();
 

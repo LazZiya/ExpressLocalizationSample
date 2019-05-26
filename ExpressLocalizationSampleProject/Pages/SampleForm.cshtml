@@ -1,5 +1,6 @@
 ﻿@page
 @model ExpressLocalizationSampleProject.Pages.SampleFormModel
+
 @{
     ViewData["Title"] = _loc.Text("Sample Form");
 }
@@ -32,5 +33,5 @@
 
 @section Scripts{ 
     <partial name="_ValidationScriptsPartial.cshtml" />
-
+    <localization-validation-scripts></localization-validation-scripts>
 }
