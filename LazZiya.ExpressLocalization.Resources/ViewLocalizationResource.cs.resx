@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&lt;strong&gt;The Development environment shouldn't be enabled for deployed applications.&lt;/strong&gt; It can result in displaying sensitive information from exceptions to end users. For local debugging, enable the &lt;strong&gt;Development&lt;/strong&gt; environment by setting the &lt;strong&gt;ASPNETCORE_ENVIRONMENT&lt;/strong&gt; environment variable to &lt;strong&gt;Development&lt;/strong&gt; and restarting the app" xml:space="preserve">
+    <value>&lt;Strong&gt; Vývojové prostředí by neměla být povolena pro nasazených aplikací. &lt;/ Strong&gt; To může mít za následek zobrazování citlivých informací z výjimek ke koncovým uživatelům. Pro místní ladění, umožňuje &lt;strong&gt; rozvoj &lt;/ strong&gt; prostředí nastavením &lt;strong&gt; ASPNETCORE_ENVIRONMENT &lt;/ strong&gt; proměnné prostředí pro &lt;strong&gt; Development &lt;/ strong&gt; a restartu aplikace</value>
+  </data>
+  <data name="Accept" xml:space="preserve">
+    <value>Akceptovat</value>
+  </data>
+  <data name="An error occurred while processing your request" xml:space="preserve">
+    <value>Při zpracování vašeho požadavku nastala chyba</value>
+  </data>
+  <data name="Create a new account" xml:space="preserve">
+    <value>Vytvořit nový účet</value>
+  </data>
+  <data name="Development Mode" xml:space="preserve">
+    <value>Režim Development</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="Forgot your password?" xml:space="preserve">
+    <value>Zapomněli jste heslo?</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Ahoj</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Domov</value>
+  </data>
+  <data name="Home page" xml:space="preserve">
+    <value>Domovská stránka</value>
+  </data>
+  <data name="LazZiya.ExpressLocalization Sample Project" xml:space="preserve">
+    <value>LazZiya.ExpressLocalization ukázkový projekt</value>
+  </data>
+  <data name="Learn about &lt;a href='https://docs.microsoft.com/aspnet/core'&gt;building Web apps with ASP.NET Core&lt;/a&gt;" xml:space="preserve">
+    <value>Přečtěte si o &lt;a href='https://docs.microsoft.com/aspnet/core'&gt; tvorbu webových aplikací pomocí ASP.NET Jádro &lt;/a&gt;</value>
+  </data>
+  <data name="Learn More" xml:space="preserve">
+    <value>Více informací</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Přihlásit se</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Odhlásit se</value>
+  </data>
+  <data name="Please enter a valid number." xml:space="preserve">
+    <value>Prosím zadejte platné číslo.</value>
+    <comment>Notice: int data types dosen't get data-val-number attribute, add it manually</comment>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Soukromí</value>
+  </data>
+  <data name="Privacy Policy" xml:space="preserve">
+    <value>Zásady ochrany osobních údajů</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registrovat</value>
+  </data>
+  <data name="Register as a new user" xml:space="preserve">
+    <value>Zaregistrovat se jako nový uživatel</value>
+  </data>
+  <data name="Request ID" xml:space="preserve">
+    <value>Request ID</value>
+  </data>
+  <data name="Sample Form" xml:space="preserve">
+    <value>vzorek Form</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Předložit</value>
+  </data>
+  <data name="Swapping to the &lt;strong&gt;Development&lt;/strong&gt; environment displays detailed information about the error that occurred" xml:space="preserve">
+    <value>Swapování na &lt;strong&gt; rozvoj &lt;/ strong&gt; Životní prostředí zobrazí podrobné informace o chybě, ke které došlo</value>
+  </data>
+  <data name="There are no external authentication services configured. See &lt;a href='https://go.microsoft.com/fwlink/?LinkID=532715'&gt;this article&lt;/a&gt; for details on setting up this ASP.NET application to support logging in via external services" xml:space="preserve">
+    <value>Nejsou žádné externí služby ověřování nakonfigurované. Viz &lt;a href='https://go.microsoft.com/fwlink/?LinkID=532715'&gt; tento článek &lt;/a&gt; Podrobnější informace o nastavení této aplikace ASP.NET podporu přihlášení prostřednictvím externích služeb</value>
+  </data>
+  <data name="Use a local account to log in" xml:space="preserve">
+    <value>Použít místní účet pro přihlášení</value>
+  </data>
+  <data name="Use another service to log in" xml:space="preserve">
+    <value>Použijte jinou službu pro přihlášení</value>
+  </data>
+  <data name="Use this page to detail your site's privacy policy" xml:space="preserve">
+    <value>Tato stránka slouží k politice ochrany soukromí detail vašeho webu</value>
+  </data>
+  <data name="Use this space to summarize your privacy and cookie use policy" xml:space="preserve">
+    <value>Použijte tento prostor, aby shrnul své soukromí a použití cookie politiku</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Vítejte</value>
+  </data>
+</root>

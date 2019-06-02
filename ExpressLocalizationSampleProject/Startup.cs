@@ -49,8 +49,25 @@ namespace ExpressLocalizationSampleProject
             var cultures = new CultureInfo[]
             {
                 new CultureInfo("en"),
+                new CultureInfo("ar"),
+                new CultureInfo("cs"),
+                new CultureInfo("de"),
+                new CultureInfo("es"),
+                new CultureInfo("fa"),
+                new CultureInfo("fr"),
+                new CultureInfo("hu"),
+                new CultureInfo("it"),
+                new CultureInfo("ja"),
+                new CultureInfo("ko"),
+                new CultureInfo("nl"),
+                new CultureInfo("pl"),
+                new CultureInfo("pt"),
+                new CultureInfo("ru"),
+                new CultureInfo("sv"),
                 new CultureInfo("tr"),
-                new CultureInfo("ar")
+                new CultureInfo("vi"),
+                new CultureInfo("zh"),
+
             };
 
             services.AddMvc()
