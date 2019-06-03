@@ -9,15 +9,10 @@
 
 
   <ItemGroup>
-    <PackageReference Include="LazZiya.ExpressLocalization" Version="1.1.0" />
+    <PackageReference Include="LazZiya.ExpressLocalization" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <ProjectReference Include="..\LazZiya.ExpressLocalization.Resources\LazZiya.ExpressLocalization.Resources.csproj" />
   </ItemGroup>
 
 </Project>

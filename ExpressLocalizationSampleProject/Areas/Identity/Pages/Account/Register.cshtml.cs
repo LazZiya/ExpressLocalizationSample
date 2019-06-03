@@ -3,7 +3,6 @@ using System.Globalization;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using LazZiya.ExpressLocalization.Messages;
-using LazZiya.ExpressLocalization.Resources;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;

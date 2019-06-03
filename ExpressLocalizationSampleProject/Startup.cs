@@ -8,13 +8,10 @@ using Microsoft.EntityFrameworkCore;
 using ExpressLocalizationSampleProject.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using LazZiya.ExpressLocalization.Resources;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using LazZiya.ExpressLocalization;
-using System;
-using Microsoft.AspNetCore.Razor.TagHelpers;
-using LazZiya.TagHelpers;
+using LazZiya.ExpressLocalizationSample.LocalizationResources;
 
 namespace ExpressLocalizationSampleProject
 {
@@ -55,6 +52,7 @@ namespace ExpressLocalizationSampleProject
                 new CultureInfo("es"),
                 new CultureInfo("fa"),
                 new CultureInfo("fr"),
+                new CultureInfo("hi"),
                 new CultureInfo("hu"),
                 new CultureInfo("it"),
                 new CultureInfo("ja"),
@@ -79,6 +77,7 @@ namespace ExpressLocalizationSampleProject
                         o.SupportedUICultures = cultures;
                         o.DefaultRequestCulture = new RequestCulture("en");
                     };
+                    ops.ResourcesPath = "LocalizationResources";
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
