@@ -481,8 +481,8 @@
     <value>{0} není platný.</value>
     <comment>DataAnnotations: CustomValidationAttribute_ValidationError</comment>
   </data>
-  <data name="{0}' and '{1}' do not match." xml:space="preserve">
-    <value>{0}‘a '{1}' se neshodují.</value>
+  <data name="'{0}' and '{1}' do not match." xml:space="preserve">
+    <value>'{0}‘a '{1}' se neshodují.</value>
     <comment>DataAnnotations: CompareAttribute_MustMatch</comment>
   </data>
 </root>

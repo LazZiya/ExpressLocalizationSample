@@ -481,7 +481,7 @@
     <value>{0}は有効ではありません。</value>
     <comment>DataAnnotations: CustomValidationAttribute_ValidationError</comment>
   </data>
-  <data name="{0}' and '{1}' do not match." xml:space="preserve">
+  <data name="'{0}' and '{1}' do not match." xml:space="preserve">
     <value>{0}」と「{1}と一致しません。</value>
     <comment>DataAnnotations: CompareAttribute_MustMatch</comment>
   </data>

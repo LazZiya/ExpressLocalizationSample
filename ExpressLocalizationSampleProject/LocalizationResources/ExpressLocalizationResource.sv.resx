@@ -481,8 +481,8 @@
     <value>{0} är inte giltig.</value>
     <comment>DataAnnotations: CustomValidationAttribute_ValidationError</comment>
   </data>
-  <data name="{0}' and '{1}' do not match." xml:space="preserve">
-    <value>{0}' och '{1}' inte stämmer överens.</value>
+  <data name="'{0}' and '{1}' do not match." xml:space="preserve">
+    <value>'{0}' och '{1}' inte stämmer överens.</value>
     <comment>DataAnnotations: CompareAttribute_MustMatch</comment>
   </data>
 </root>

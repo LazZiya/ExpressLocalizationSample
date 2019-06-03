@@ -481,8 +481,8 @@
     <value>{0} не является действительным.</value>
     <comment>DataAnnotations: CustomValidationAttribute_ValidationError</comment>
   </data>
-  <data name="{0}' and '{1}' do not match." xml:space="preserve">
-    <value>{0}»и '{1}' не совпадают.</value>
+  <data name="'{0}' and '{1}' do not match." xml:space="preserve">
+    <value>'{0}' и '{1}' не совпадают.</value>
     <comment>DataAnnotations: CompareAttribute_MustMatch</comment>
   </data>
 </root>

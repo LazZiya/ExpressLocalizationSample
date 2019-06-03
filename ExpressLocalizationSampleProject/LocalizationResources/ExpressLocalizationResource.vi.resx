@@ -481,8 +481,8 @@
     <value>{0} là không hợp lệ.</value>
     <comment>DataAnnotations: CustomValidationAttribute_ValidationError</comment>
   </data>
-  <data name="{0}' and '{1}' do not match." xml:space="preserve">
-    <value>{0}' và '{1}' không khớp.</value>
+  <data name="'{0}' and '{1}' do not match." xml:space="preserve">
+    <value>'{0}' và '{1}' không khớp.</value>
     <comment>DataAnnotations: CompareAttribute_MustMatch</comment>
   </data>
 </root>

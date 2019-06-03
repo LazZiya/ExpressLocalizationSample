@@ -481,8 +481,8 @@
     <value>{0} no es válido.</value>
     <comment>DataAnnotations: CustomValidationAttribute_ValidationError</comment>
   </data>
-  <data name="{0}' and '{1}' do not match." xml:space="preserve">
-    <value>{0}' y '{1}' no coinciden.</value>
+  <data name="'{0}' and '{1}' do not match." xml:space="preserve">
+    <value>'{0}' y '{1}' no coinciden.</value>
     <comment>DataAnnotations: CompareAttribute_MustMatch</comment>
   </data>
 </root>
