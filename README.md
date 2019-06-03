@@ -9,7 +9,7 @@ The project is based on original template from Asp.NetCore 2.2.
  - IdentityErrorDescriber messages
  - Route value based request culture provider
  
-## Supported Cultures
+## Available Cultures
  - Arabic
  - Chinese
  - Czech
@@ -17,6 +17,7 @@ The project is based on original template from Asp.NetCore 2.2.
  - English
  - French
  - German
+ - Hindi
  - Hungarian
  - Italian
  - Japanese
