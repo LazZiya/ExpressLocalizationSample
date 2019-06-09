@@ -276,24 +276,8 @@
     <value>Doğrulama anahtarını sıfırlarsanız ikili kimlik doğrulama uygulaması siz onu bir daha ayarlayana kadar çalışmayacaktır.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Bu işlem ikili-kimlik doğrulamayı siz onu bir daha ayarlayana kadar iptal eder. Doğrulama uygulaması ayarlarını tamamlayamazsanız hesabınıza erişimi kaybedebilirsiniz.</value>
     <comment>Identity view</comment>
   </data>
-  <data name="Access denied" xml:space="preserve">
-    <value>Erişim engellendi</value>
-    <comment>Identity view</comment>
-  </data>
   <data name="Add another service to log in." xml:space="preserve">
     <value>Giriş için başka hizmet ekle.</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="Add authenticator app" xml:space="preserve">
-    <value>Doğrulama uygulaması ekle</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="Associate your {0} account." xml:space="preserve">
-    <value>{0} hesabınızı bağlama</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="Authenticator app" xml:space="preserve">
-    <value>Doğrulama uygulaması</value>
     <comment>Identity view</comment>
   </data>
   <data name="Cannot disable 2FA as it's not currently enabled." xml:space="preserve">
@@ -316,10 +300,6 @@
     <value>Kimlik doğrulama uygulaması ayarları</value>
     <comment>Identity view</comment>
   </data>
-  <data name="Confirm email" xml:space="preserve">
-    <value>Eposta adresini doğrula</value>
-    <comment>Identity view</comment>
-  </data>
   <data name="Confirm your email address" xml:space="preserve">
     <value>Eposta adresini doğrula</value>
     <comment>Identity message</comment>
@@ -335,37 +315,9 @@
     <value>Kişisel verilerini indir</value>
     <comment>Identity view</comment>
   </data>
-  <data name="Enter your email." xml:space="preserve">
-    <value>Eposta adresini gir.</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="Error confirming email." xml:space="preserve">
-    <value>Eposta adresi doğrulanamadı.</value>
-    <comment>Identity message</comment>
-  </data>
-  <data name="Error from external provider: {0}" xml:space="preserve">
-    <value />
-    <comment>Identity message</comment>
-  </data>
-  <data name="Error loading external login information during confirmation." xml:space="preserve">
-    <value>Doğrulama sırasında dış giriş bilgileri yüklenirken hata oluştu.</value>
-    <comment>Identity message</comment>
-  </data>
   <data name="Error loading external login information." xml:space="preserve">
     <value>Dış sağlayıcıdan giriş bilgileri yükleme hatası</value>
     <comment>Identity message</comment>
-  </data>
-  <data name="Forget this browser" xml:space="preserve">
-    <value>Bu tarayıcıyı unut</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="Forgot password confirmation" xml:space="preserve">
-    <value>Şifre sıfırlama doğrulaması</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="generate a new set of recovery codes" xml:space="preserve">
-    <value>Yeni kurtarma anahtarları oluştur</value>
-    <comment>Identity view</comment>
   </data>
   <data name="Generate Recovery Codes" xml:space="preserve">
     <value>Kurtarma Anahtarlarını Oluştur</value>
@@ -373,14 +325,6 @@
   </data>
   <data name="Generate two-factor authentication (2FA) recovery codes" xml:space="preserve">
     <value>ikili-kimlik doğrulama kurtarma kodunu oluştur</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="Go to home page" xml:space="preserve">
-    <value>Ana sayfaya git</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="Locked out" xml:space="preserve">
-    <value>Hesap kilitlendi</value>
     <comment>Identity view</comment>
   </data>
   <data name="Log in using your {0} account" xml:space="preserve">
@@ -399,17 +343,9 @@
     <value>Kişisel veriler</value>
     <comment>Identity view</comment>
   </data>
-  <data name="Please check your email to reset your password." xml:space="preserve">
-    <value>Şifreyi sıfırlamak için lütfen eposta adresini kontrol et.</value>
-    <comment>Identity view</comment>
-  </data>
   <data name="Please confirm your account by &lt;a href='{0}'&gt;clicking here&lt;/a&gt;" xml:space="preserve">
     <value>Lütfen eposta adresinizi &lt;a href='{0}'&gt;buraya tıklayarak doğrulayın&lt;/a&gt;</value>
     <comment>Identity message</comment>
-  </data>
-  <data name="Please sign in" xml:space="preserve">
-    <value>Lütfen giriş yap</value>
-    <comment>Identity view</comment>
   </data>
   <data name="Profile settings" xml:space="preserve">
     <value>Profil ayarları</value>
@@ -427,21 +363,9 @@
     <value>Bu {0} girişini hesabından kaldır</value>
     <comment>Identity view</comment>
   </data>
-  <data name="Reset authenticator app" xml:space="preserve">
-    <value>Doğrulama uygulamasını sıfırla</value>
-    <comment>Identity view</comment>
-  </data>
   <data name="Reset authenticator key" xml:space="preserve">
     <value>Doğrulama anahtarını sıfırla</value>
     <comment>Identity view</comment>
-  </data>
-  <data name="Reset recovery codes" xml:space="preserve">
-    <value>Kurtarma anhtarlarını sıfırla</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="Reset your password" xml:space="preserve">
-    <value>Şifreni sıfırla</value>
-    <comment>Identity message</comment>
   </data>
   <data name="Scan the QR Code or enter this key &lt;kbd&gt;{0}&lt;/kbd&gt; into your two factor authenticator app. Spaces and casing do not matter.&lt;/p&gt;&lt;div class='alert alert-info'&gt;To enable QR code generation please read our &lt;a href='https://go.microsoft.com/fwlink/?Linkid=852423'&gt;documentation&lt;/a&gt;.&lt;/div&gt;" xml:space="preserve">
     <value>QR kodunu tara yada bu anahtarı &lt;kbd&gt;{0}&lt;/kbd&gt; ikili kimlik doğrulama uygulamasına gir. Boşluk veya büyük-küçük harf girmenize gerek yok.&lt;/p&gt;&lt;div class='alert alert-info'&gt;QR kod oluşturmak için &lt;a href='https://go.microsoft.com/fwlink/?Linkid=852423'&gt;dokümanları oku&lt;/a&gt;.&lt;/div&gt;</value>
@@ -459,18 +383,6 @@
     <value>Şifre belirle</value>
     <comment>Identity view</comment>
   </data>
-  <data name="Setup authenticator app" xml:space="preserve">
-    <value>Doğrulama uygulamasını ayarla</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="Sign in" xml:space="preserve">
-    <value>Giriş</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="Thank you for confirming your email." xml:space="preserve">
-    <value>Teşekkürler, eposta adrei doğrulandı.</value>
-    <comment>Identity view</comment>
-  </data>
   <data name="The external login was added." xml:space="preserve">
     <value>Dış giriş eklendi.</value>
     <comment>Identity message</comment>
@@ -479,20 +391,8 @@
     <value>Dış giriş kaldırıldı.</value>
     <comment>Identity message</comment>
   </data>
-  <data name="This account has been locked out, please try again later." xml:space="preserve">
-    <value>Bu hesap kilitlenmiştir, lütfen daha sonra tekrar dene.</value>
-    <comment>Identity view</comment>
-  </data>
   <data name="To use an authenticator app go through the following steps" xml:space="preserve">
     <value>Kimlik doğrulama uygulamasıayarlamak için aşağıdaki adımları takip edin</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="Two factor authentication has been removed." xml:space="preserve">
-    <value>İkili kimlik doğrulama kaldırıldı</value>
-    <comment>Identity message</comment>
-  </data>
-  <data name="Two-factor authentication (2FA)" xml:space="preserve">
-    <value>İki faktörlü kimlik doğrulama (2fA)</value>
     <comment>Identity view</comment>
   </data>
   <data name="Unexpected error occurred adding external login" xml:space="preserve">
@@ -511,14 +411,6 @@
     <value>Dış giriş kaldırılırken beklenmedik birhata oluştu.</value>
     <comment>Identity message</comment>
   </data>
-  <data name="Updated done successfully." xml:space="preserve">
-    <value>Güncelleme tamamlandı.</value>
-    <comment>Identity message</comment>
-  </data>
-  <data name="Use another service to log in." xml:space="preserve">
-    <value>Giriş için başka hizmet kullan.</value>
-    <comment>Identity view</comment>
-  </data>
   <data name="Verification code is invalid." xml:space="preserve">
     <value>Doğrulama kodu geçerli değil.</value>
     <comment>Identity message</comment>
@@ -535,29 +427,13 @@
     <value>Bu site için yerel kullanıcı adı/şifreniz yoktur. Yerel hesap eklerseniz dış hesabı kullanmadan giriş yapabilirsiniz.</value>
     <comment>Identity view</comment>
   </data>
-  <data name="You do not have access to this resource." xml:space="preserve">
-    <value>Bu kaynaklara erişim izniniz yoktur.</value>
-    <comment>Identity view</comment>
-  </data>
   <data name="You have generated new recovery codes." xml:space="preserve">
     <value>Yeni kurtarma anahtarlar oluşturuldu.</value>
     <comment>Identity message</comment>
   </data>
-  <data name="You have no recovery codes left." xml:space="preserve">
-    <value>Kurtarma anahtarınız kalmamıştır.</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="You have {0} recovery codes left." xml:space="preserve">
-    <value>Geriye {0} kurtarma anahtarınız kalmıştır.</value>
-    <comment>Identity view</comment>
-  </data>
   <data name="You profile has been updated." xml:space="preserve">
     <value>Profil bilgileri kaydedildi.</value>
     <comment>Identity message</comment>
-  </data>
-  <data name="You've successfully authenticated with &lt;strong&gt;{0}&lt;/strong&gt;. Please enter an email address for this site below and click the Register button to finish logging in." xml:space="preserve">
-    <value>&lt;strong&gt;{0}&lt;/strong&gt; ile kimlik doğrulama tamamlanmıştır. Girişi tamamlamak için lütfen bu site için bir eposta adresi gir ve Kaydol butouna bas.</value>
-    <comment>Identity view</comment>
   </data>
   <data name="Your account contains personal data that you have given us. This page allows you to download or delete that data.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deleting this data will permanently remove your account, and this cannot be recovered.&lt;/strong&gt;" xml:space="preserve">
     <value>Hesabınızda kayıt olurken bize vermiş olduğunuz kişisel veriler yer vardır. Bu sayfada bu verileri indirebilir veya silebilirsiniz.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Bu verileri silmek hesabınızı tamamen kaldıracak, bu işlem geri dönülemez.&lt;/strong&gt;</value>
@@ -570,37 +446,5 @@
   <data name="Your authenticator app key has been reset, you will need to configure your authenticator app using the new key." xml:space="preserve">
     <value>Doğrulaması uygulama kodu sıfırlandı, ikili kimlik doğrulama uygulamasını yeni anahtar ile ayarlamanız gerekiyor.</value>
     <comment>Identity message</comment>
-  </data>
-  <data name="Authentication code is invalid." xml:space="preserve">
-    <value>Doğrulama kodu yanlış.</value>
-    <comment>Identity message</comment>
-  </data>
-  <data name="Don't have access to your authenticator device?" xml:space="preserve">
-    <value>Kimlik doğrulama uygulaması cihazına erişiminiz yok mu?</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="Invalid login attempt." xml:space="preserve">
-    <value>Giriş işlemi başarısız.</value>
-    <comment>Identity message</comment>
-  </data>
-  <data name="log in with a recovery code" xml:space="preserve">
-    <value>Kurtarma kodu ile giriş yap</value>
-    <comment>Identity view</comment>
-  </data>
-  <data name="Unable to load two-factor authentication user." xml:space="preserve">
-    <value>İki faktörlü doğrulama kullanıcısı yüklemedi</value>
-    <comment>Identity message</comment>
-  </data>
-  <data name="Unknown error occord, please try again later." xml:space="preserve">
-    <value>Bilinmeyen bir hata oluştu, lütfen daha sonra tekrar dene.</value>
-    <comment>Identity message</comment>
-  </data>
-  <data name="You didn't pass the captcha validation. Are you a robot?" xml:space="preserve">
-    <value>Kapta kod testini geçemedin, robot musun?</value>
-    <comment>Identity message</comment>
-  </data>
-  <data name="Your login is protected with an authenticator app. Enter your authenticator code below." xml:space="preserve">
-    <value>Hesabınız kimlik doğrulama uygulaması ile korumalı. Lütfen doğrulama kodunuzu aşağıda yazınız.</value>
-    <comment>Identity view</comment>
   </data>
 </root>

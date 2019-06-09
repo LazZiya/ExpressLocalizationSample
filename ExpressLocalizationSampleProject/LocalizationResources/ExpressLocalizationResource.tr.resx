@@ -159,7 +159,7 @@
   </data>
   <data name="Date" xml:space="preserve">
     <value>Tarih</value>
-    <comment>DataAnnotations: Custom value</comment>
+    <comment>Custom: DataAnnotations</comment>
   </data>
   <data name="Either ErrorMessageString or ErrorMessageResourceName must be set, but not both." xml:space="preserve">
     <value>ErrorMessageString veya ErrorMessageResourceName ayarlarının yapılması gerekir, ancak ikisi birden değil.</value>
@@ -175,7 +175,7 @@
   </data>
   <data name="ID" xml:space="preserve">
     <value>Kimlik</value>
-    <comment>DataAnnotations: Custom value</comment>
+    <comment>Custom: DataAnnotations</comment>
   </data>
   <data name="Incorrect password." xml:space="preserve">
     <value>Yazdığınız şifre hesabınızda kayıtlı olan şifre ile eşleşmiyor.</value>
@@ -207,7 +207,7 @@
   </data>
   <data name="Name" xml:space="preserve">
     <value>Ad</value>
-    <comment>DataAnnotations: Custom value</comment>
+    <comment>Custom: DataAnnotations</comment>
   </data>
   <data name="Optimistic concurrency failure, object has been modified." xml:space="preserve">
     <value>Eş-zamanlama hatası.</value>
@@ -239,7 +239,7 @@
   </data>
   <data name="Price" xml:space="preserve">
     <value>Fiyat</value>
-    <comment>DataAnnotations: Custom value</comment>
+    <comment>Custom: DataAnnotations</comment>
   </data>
   <data name="Recovery code redemption failed." xml:space="preserve">
     <value>Kurtarma kodu kullanılamadı.</value>
@@ -475,14 +475,42 @@
   </data>
   <data name="Confirm password" xml:space="preserve">
     <value>Şifreyi tekarla</value>
-    <comment>DataAnnotations: Custom value</comment>
+    <comment>Custom: DataAnnotations - Identity</comment>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Eposta</value>
-    <comment>DataAnnotations: Custom value</comment>
+    <comment>Custom: DataAnnotations - Identity</comment>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Şifre</value>
-    <comment>DataAnnotations: Custom value</comment>
+    <comment>Custom: DataAnnotations - Identity</comment>
+  </data>
+  <data name="Current password" xml:space="preserve">
+    <value>Eski şifre</value>
+    <comment>Custom: DataAnnotations - Identity</comment>
+  </data>
+  <data name="New password" xml:space="preserve">
+    <value>Yeni şifre</value>
+    <comment>Custom: DataAnnotations - Identity</comment>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>Telefon numarası</value>
+    <comment>Custom: DataAnnotations - Identity</comment>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Kullanıcı adı</value>
+    <comment>Custom: DataAnnotations - Identity</comment>
+  </data>
+  <data name="Verification code" xml:space="preserve">
+    <value>Doğrulama kodu</value>
+    <comment>Custom: DataAnnotations Identity</comment>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>Beni hatırla</value>
+    <comment>Custom: DataAnnotations Identity</comment>
+  </data>
+  <data name="Remember this machine?" xml:space="preserve">
+    <value>Bu cihazı hatırla?</value>
+    <comment>Custom: DataAnnotations Identity</comment>
   </data>
 </root>
