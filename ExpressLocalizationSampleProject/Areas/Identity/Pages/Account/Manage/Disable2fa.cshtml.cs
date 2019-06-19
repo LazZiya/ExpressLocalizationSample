@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using ExpressLocalizationSampleProject.LocalizationResources;
+using LazZiya.ExpressLocalization;
+using LazZiya.TagHelpers.Alerts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -13,17 +17,20 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<Disable2faModel> _logger;
+        private readonly SharedCultureLocalizer _loc;
 
         public Disable2faModel(
             UserManager<IdentityUser> userManager,
-            ILogger<Disable2faModel> logger)
+            ILogger<Disable2faModel> logger,
+            SharedCultureLocalizer loc)
         {
             _userManager = userManager;
             _logger = logger;
+            _loc = loc;
         }
 
-        [TempData]
-        public string StatusMessage { get; set; }
+        //[TempData]
+        //public string StatusMessage { get; set; }
 
         public async Task<IActionResult> OnGet()
         {
@@ -56,8 +63,10 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
             }
 
             _logger.LogInformation("User with ID '{UserId}' has disabled 2fa.", _userManager.GetUserId(User));
-            StatusMessage = "2fa has been disabled. You can reenable 2fa when you setup an authenticator app";
-            return RedirectToPage("./TwoFactorAuthentication");
+            //StatusMessage = "2fa has been disabled. You can reenable 2fa when you setup an authenticator app";
+            TempData.Success(_loc.Text(LocalizedBackendMessages.TwoFADisableSuccess).Value);
+
+            return RedirectToPage("./TwoFactorAuthentication", new { culture = CultureInfo.CurrentCulture.Name });
         }
     }
 }

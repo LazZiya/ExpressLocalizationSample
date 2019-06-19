@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using ExpressLocalizationSampleProject.LocalizationResources;
+using LazZiya.ExpressLocalization;
+using LazZiya.ExpressLocalization.Messages;
+using LazZiya.TagHelpers.Alerts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -16,30 +21,33 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly IEmailSender _emailSender;
+        private readonly SharedCultureLocalizer _loc;
 
         public IndexModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            SharedCultureLocalizer loc)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
+            _loc = loc;
         }
 
         public string Username { get; set; }
 
         public bool IsEmailConfirmed { get; set; }
 
-        [TempData]
-        public string StatusMessage { get; set; }
+        //[TempData]
+        //public string StatusMessage { get; set; }
 
         [BindProperty]
         public InputModel Input { get; set; }
 
         public class InputModel
         {
-            [Required]
+            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
             [EmailAddress]
             public string Email { get; set; }
 
@@ -109,7 +117,8 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
             }
 
             await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Your profile has been updated";
+            //StatusMessage = "Your profile has been updated";
+            TempData.Success(_loc.Text(LocalizedBackendMessages.UserProfileUpdateSuccess).Value);
             return RedirectToPage();
         }
 
@@ -126,21 +135,21 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
 
-
             var userId = await _userManager.GetUserIdAsync(user);
             var email = await _userManager.GetEmailAsync(user);
             var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             var callbackUrl = Url.Page(
                 "/Account/ConfirmEmail",
                 pageHandler: null,
-                values: new { userId = userId, code = code },
+                values: new { userId = userId, code = code, culture= CultureInfo.CurrentCulture.Name },
                 protocol: Request.Scheme);
             await _emailSender.SendEmailAsync(
                 email,
-                "Confirm your email",
-                $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                _loc.Text(LocalizedBackendMessages.VerificationEmailTitle).Value,
+                _loc.Text(LocalizedBackendMessages.VerificationEmailBody, HtmlEncoder.Default.Encode(callbackUrl)).Value);
 
-            StatusMessage = "Verification email sent. Please check your email.";
+            //StatusMessage = "Verification email sent. Please check your email.";
+            TempData.Info(_loc.Text(LocalizedBackendMessages.VerificationEmailSent).Value);
             return RedirectToPage();
         }
     }

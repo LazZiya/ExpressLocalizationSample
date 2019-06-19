@@ -2,14 +2,15 @@
 @model LoginWith2faModel
 @{
     ViewData["Title"] = "Two-factor authentication";
+    var culture = CultureInfo.CurrentCulture.Name;
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1 localize-content>@ViewData["Title"]</h1>
 <hr />
-<p>Your login is protected with an authenticator app. Enter your authenticator code below.</p>
+<p localize-content>Your login is protected with an authenticator app. Enter your authenticator code below.</p>
 <div class="row">
     <div class="col-md-4">
-        <form method="post" asp-route-returnUrl="@Model.ReturnUrl">
+        <form method="post" asp-route-returnUrl="@Model.ReturnUrl" asp-route-culture="@culture">
             <input asp-for="RememberMe" type="hidden" />
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
@@ -26,14 +27,14 @@
                 </div>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Log in</button>
+                <button type="submit" class="btn btn-primary" localize-content>Log in</button>
             </div>
         </form>
     </div>
 </div>
-<p>
+<p localize-args="@(new[] { Url.Page("./LoginWithRecoveryCode", null, new { returnUrl=Model.ReturnUrl, culture = culture }) })">
     Don't have access to your authenticator device? You can
-    <a id="recovery-code-login" asp-page="./LoginWithRecoveryCode" asp-route-returnUrl="@Model.ReturnUrl">log in with a recovery code</a>.
+    <a id="recovery-code-login" href="{0}">log in with a recovery code</a>.
 </p>
 
 @section Scripts {

@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using ExpressLocalizationSampleProject.LocalizationResources;
+using LazZiya.ExpressLocalization;
+using LazZiya.TagHelpers.Alerts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -13,20 +17,23 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<GenerateRecoveryCodesModel> _logger;
+        private readonly SharedCultureLocalizer _loc;
 
         public GenerateRecoveryCodesModel(
             UserManager<IdentityUser> userManager,
-            ILogger<GenerateRecoveryCodesModel> logger)
+            ILogger<GenerateRecoveryCodesModel> logger,
+            SharedCultureLocalizer loc)
         {
             _userManager = userManager;
             _logger = logger;
+            _loc = loc;
         }
 
         [TempData]
         public string[] RecoveryCodes { get; set; }
 
-        [TempData]
-        public string StatusMessage { get; set; }
+        //[TempData]
+        //public string StatusMessage { get; set; }
 
         public async Task<IActionResult> OnGetAsync()
         {
@@ -65,8 +72,9 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
             RecoveryCodes = recoveryCodes.ToArray();
 
             _logger.LogInformation("User with ID '{UserId}' has generated new 2FA recovery codes.", userId);
-            StatusMessage = "You have generated new recovery codes.";
-            return RedirectToPage("./ShowRecoveryCodes");
+            TempData.Success(_loc.Text(LocalizedBackendMessages.GeneraterecoveryCodesSuccess).Value);
+
+            return RedirectToPage("./ShowRecoveryCodes", new { culture = CultureInfo.CurrentCulture.Name });
         }
     }
 }

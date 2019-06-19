@@ -2,16 +2,17 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = _loc.Text("Login");
-    var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+    ViewData["Title"] = "Login";
+    var culture = CultureInfo.CurrentCulture.Name;
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1 localize-content>@ViewData["Title"]</h1>
+
 <div class="row">
     <div class="col-md-4">
         <section>
             <form id="account" method="post">
-                <h4>@_loc.Text("Use a local account to log in").</h4>
+                <h4 localize-content>Use a local account to log in.</h4>
                 <hr />
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group">
@@ -33,14 +34,14 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">@_loc.Text("Login")</button>
+                    <button type="submit" class="btn btn-primary" localize-content>Login</button>
                 </div>
                 <div class="form-group">
                     <p>
-                        <a id="forgot-password" asp-route-culture="@culture" asp-page="./ForgotPassword">@_loc.Text("Forgot your password?")</a>
+                        <a id="forgot-password" asp-route-culture="@culture" asp-page="./ForgotPassword" localize-content>Forgot your password?</a>
                     </p>
                     <p>
-                        <a asp-page="./Register" asp-route-culture="@culture" asp-route-returnUrl="@Model.ReturnUrl">@_loc.Text("Register as a new user")</a>
+                        <a asp-page="./Register" asp-route-culture="@culture" asp-route-returnUrl="@Model.ReturnUrl" localize-content>Register as a new user</a>
                     </p>
                 </div>
             </form>
@@ -48,14 +49,14 @@
     </div>
     <div class="col-md-6 col-md-offset-2">
         <section>
-            <h4>@_loc.Text("Use another service to log in").</h4>
+            <h4 localize-content>Use another service to log in.</h4>
             <hr />
             @{
                 if ((Model.ExternalLogins?.Count ?? 0) == 0)
                 {
                     <div>
-                        <p>
-                            @_loc.Text("There are no external authentication services configured. See <a href='https://go.microsoft.com/fwlink/?LinkID=532715'>this article</a> for details on setting up this ASP.NET application to support logging in via external services").
+                        <p localize-content>
+                            There are no external authentication services configured. See <a href='https://go.microsoft.com/fwlink/?LinkID=532715'>this article</a> for details on setting up this ASP.NET application to support logging in via external services.
                         </p>
                     </div>
                 }
@@ -66,7 +67,7 @@
                             <p>
                                 @foreach (var provider in Model.ExternalLogins)
                                 {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name"  localize-att-title="Log in using your external account">@provider.DisplayName</button>
                                 }
                             </p>
                         </div>

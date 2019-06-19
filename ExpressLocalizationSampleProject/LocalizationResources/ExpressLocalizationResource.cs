@@ -1,4 +1,4 @@
-﻿namespace LazZiya.ExpressLocalizationSample.LocalizationResources
+﻿namespace ExpressLocalizationSampleProject.LocalizationResources
 {
     public class ExpressLocalizationResource
     {

@@ -2,27 +2,27 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 @{
-    var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+    var culture = CultureInfo.CurrentCulture.Name;
 }
 <ul class="navbar-nav">
     @if (SignInManager.IsSignedIn(User))
     {
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="Identity" asp-route-culture="@culture" asp-page="/Account/Manage/Index" title="Manage">@_loc.Text("Hello") @User.Identity.Name!</a>
+            <a class="nav-link text-dark" asp-area="Identity" asp-route-culture="@culture" asp-page="/Account/Manage/Index" title="Manage" localize-args="@(new[] {User.Identity.Name })">Hello {0}!</a>
         </li>
         <li class="nav-item">
             <form class="form-inline" asp-area="Identity" asp-route-culture="@culture" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                <button type="submit" class="nav-link btn btn-link text-dark">@_loc.Text("Logout")</button>
+                <button type="submit" class="nav-link btn btn-link text-dark" localize-content>Logout</button>
             </form>
         </li>
     }
     else
     {
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="Identity" asp-route-culture="@culture" asp-page="/Account/Register">@_loc.Text("Register")</a>
+            <a class="nav-link text-dark" asp-area="Identity" asp-route-culture="@culture" asp-page="/Account/Register" localize-content>Register</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="Identity" asp-route-culture="@culture" asp-page="/Account/Login">@_loc.Text("Login")</a>
+            <a class="nav-link text-dark" asp-area="Identity" asp-route-culture="@culture" asp-page="/Account/Login" localize-content>Login</a>
         </li>
     }
 </ul>

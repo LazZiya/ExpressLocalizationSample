@@ -2,15 +2,15 @@
 @model ExpressLocalizationSampleProject.Pages.SampleFormModel
 
 @{
-    ViewData["Title"] = _loc.Text("Sample Form");
+    ViewData["Title"] = "Sample Form";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1 localize-content>@ViewData["Title"]</h1>
 
 <form method="post" class="col-4">
     <div class="form-group">
         <label asp-for="Test.ID"></label>
-        <input asp-for="Test.ID" class="form-control" data-val-number="@_loc.Text("Please enter a valid number.")"/>
+        <input asp-for="Test.ID" class="form-control" localize-att-data-val-number="Please enter a valid number."/>
         <span asp-validation-for="Test.ID" class="text-danger"></span>
     </div>
     <div class="form-group">
@@ -28,7 +28,7 @@
         <input asp-for="Test.Date" class="form-control" />
         <span asp-validation-for="Test.Date" class="text-danger"></span>
     </div>
-    <button type="submit" value="Submit" class="btn btn-primary">@_loc.Text("Submit")</button>
+    <button type="submit" value="Submit" class="btn btn-primary" localize-content>Submit</button>
 </form>
 
 @section Scripts{ 

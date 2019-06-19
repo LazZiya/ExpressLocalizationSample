@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -32,7 +33,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
             _logger.LogInformation("User logged out.");
             if (returnUrl != null)
             {
-                return LocalRedirect(returnUrl);
+                return LocalRedirect(returnUrl ?? Url.Content($"~/{CultureInfo.CurrentCulture.Name}"));
             }
             else
             {

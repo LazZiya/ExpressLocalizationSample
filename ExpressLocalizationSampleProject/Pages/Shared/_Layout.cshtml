@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - @_loc.Text("LazZiya.ExpressLocalization Sample Project")</title>
+    <title><localize>@ViewData["Title"]</localize> - Express Localization Sample</title>
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     </environment>
@@ -36,13 +36,13 @@
                     <language-nav view-context="ViewContext"></language-nav>
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-route-culture="@culture" asp-page="/Index">@_loc.Text("Home")</a>
+                            <a class="nav-link text-dark" asp-area="" asp-route-culture="@culture" asp-page="/Index" localize-content>Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-route-culture="@culture" asp-page="/SampleForm">@_loc.Text("Sample Form")</a>
+                            <a class="nav-link text-dark" asp-area="" asp-route-culture="@culture" asp-page="/SampleForm" localize-content>Sample Form</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-route-culture="@culture" asp-page="/Privacy">@_loc.Text("Privacy")</a>
+                            <a class="nav-link text-dark" asp-area="" asp-route-culture="@culture" asp-page="/Privacy" localize-content>Privacy</a>
                         </li>
                     </ul>
                 </div>
@@ -52,13 +52,14 @@
     <div class="container">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
+            <alert view-context="ViewContext"></alert>
             @RenderBody()
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; @DateTime.Today.Year - @_loc.Text("LazZiya.ExpressLocalization Sample Project") - <a asp-area="" asp-route-culture="@culture" asp-page="/Privacy">@_loc.Text("Privacy")</a>
+            &copy; @DateTime.Today.Year - <a href="http://ziyad.info">Ziyad.info</a> - <a asp-area="" asp-route-culture="@culture" asp-page="/Privacy" localize-content>Privacy</a>
         </div>
     </footer>
 

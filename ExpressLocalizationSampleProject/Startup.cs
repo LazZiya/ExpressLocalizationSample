@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using LazZiya.ExpressLocalization;
-using LazZiya.ExpressLocalizationSample.LocalizationResources;
+using ExpressLocalizationSampleProject.LocalizationResources;
 
 namespace ExpressLocalizationSampleProject
 {
@@ -67,6 +67,7 @@ namespace ExpressLocalizationSampleProject
                 new CultureInfo("zh"),
 
             };
+            services.AddSession();
 
             services.AddMvc()
                 .AddExpressLocalization<ExpressLocalizationResource, ViewLocalizationResource>(ops =>

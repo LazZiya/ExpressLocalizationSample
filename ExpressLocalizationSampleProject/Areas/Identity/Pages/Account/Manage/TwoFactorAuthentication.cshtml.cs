@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ExpressLocalizationSampleProject.LocalizationResources;
+using LazZiya.ExpressLocalization;
+using LazZiya.TagHelpers.Alerts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -16,15 +19,18 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<TwoFactorAuthenticationModel> _logger;
+        private readonly SharedCultureLocalizer _loc;
 
         public TwoFactorAuthenticationModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
-            ILogger<TwoFactorAuthenticationModel> logger)
+            ILogger<TwoFactorAuthenticationModel> logger,
+            SharedCultureLocalizer loc)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
+            _loc = loc;
         }
 
         public bool HasAuthenticator { get; set; }
@@ -36,8 +42,8 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
 
         public bool IsMachineRemembered { get; set; }
 
-        [TempData]
-        public string StatusMessage { get; set; }
+        //[TempData]
+        //public string StatusMessage { get; set; }
 
         public async Task<IActionResult> OnGet()
         {
@@ -64,7 +70,9 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
             }
 
             await _signInManager.ForgetTwoFactorClientAsync();
-            StatusMessage = "The current browser has been forgotten. When you login again from this browser you will be prompted for your 2fa code.";
+            //StatusMessage = "The current browser has been forgotten. When you login again from this browser you will be prompted for your 2fa code.";
+            TempData.Success(_loc.Text(LocalizedBackendMessages.TwoFAForgetBrowserSuccess).Value);
+
             return RedirectToPage();
         }
     }

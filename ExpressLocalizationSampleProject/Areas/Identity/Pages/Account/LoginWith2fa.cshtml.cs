@@ -1,8 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using ExpressLocalizationSampleProject.LocalizationResources;
+using LazZiya.ExpressLocalization;
+using LazZiya.ExpressLocalization.Messages;
+using LazZiya.TagHelpers.Alerts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -16,11 +21,16 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginWith2faModel> _logger;
+        private readonly SharedCultureLocalizer _loc;
 
-        public LoginWith2faModel(SignInManager<IdentityUser> signInManager, ILogger<LoginWith2faModel> logger)
+        private readonly string culture;
+
+        public LoginWith2faModel(SignInManager<IdentityUser> signInManager, ILogger<LoginWith2faModel> logger, SharedCultureLocalizer loc)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _loc = loc;
+            culture = CultureInfo.CurrentCulture.Name;
         }
 
         [BindProperty]
@@ -32,8 +42,8 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
-            [StringLength(7, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
+            [StringLength(7, ErrorMessage = DataAnnotationsErrorMessages.StringLengthAttribute_ValidationErrorIncludingMinimum, MinimumLength = 6)]
             [DataType(DataType.Text)]
             [Display(Name = "Authenticator code")]
             public string TwoFactorCode { get; set; }
@@ -52,7 +62,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
                 throw new InvalidOperationException($"Unable to load two-factor authentication user.");
             }
 
-            ReturnUrl = returnUrl;
+            ReturnUrl = returnUrl ?? Url.Content($"~/{culture}");
             RememberMe = rememberMe;
 
             return Page();
@@ -65,7 +75,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
                 return Page();
             }
 
-            returnUrl = returnUrl ?? Url.Content("~/");
+            returnUrl = returnUrl ?? Url.Content($"~/{culture}");
 
             var user = await _signInManager.GetTwoFactorAuthenticationUserAsync();
             if (user == null)
@@ -85,12 +95,12 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
             else if (result.IsLockedOut)
             {
                 _logger.LogWarning("User with ID '{UserId}' account locked out.", user.Id);
-                return RedirectToPage("./Lockout");
+                return RedirectToPage("./Lockout", new { culture });
             }
             else
             {
                 _logger.LogWarning("Invalid authenticator code entered for user with ID '{UserId}'.", user.Id);
-                ModelState.AddModelError(string.Empty, "Invalid authenticator code.");
+                TempData.Danger(_loc.Text(LocalizedBackendMessages.InvalidAuthenticationCode).Value);
                 return Page();
             }
         }

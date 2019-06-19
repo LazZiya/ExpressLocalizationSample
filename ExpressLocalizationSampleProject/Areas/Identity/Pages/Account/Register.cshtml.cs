@@ -2,7 +2,10 @@
 using System.Globalization;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using ExpressLocalizationSampleProject.LocalizationResources;
+using LazZiya.ExpressLocalization;
 using LazZiya.ExpressLocalization.Messages;
+using LazZiya.TagHelpers.Alerts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -19,6 +22,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly SharedCultureLocalizer _loc;
 
         private readonly string _culture;
 
@@ -26,12 +30,14 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            SharedCultureLocalizer loc)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _loc = loc;
 
             _culture = CultureInfo.CurrentCulture.Name;
         }
@@ -83,15 +89,17 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
                         values: new { userId = user.Id, code = code },
                         protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    await _emailSender.SendEmailAsync(Input.Email, 
+                        _loc.Text(LocalizedBackendMessages.VerificationEmailTitle).Value,
+                        _loc.Text(LocalizedBackendMessages.VerificationEmailBody, HtmlEncoder.Default.Encode(callbackUrl)).Value);
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     return LocalRedirect(returnUrl);
                 }
                 foreach (var error in result.Errors)
                 {
-                    ModelState.AddModelError(string.Empty, error.Description);
+                    //ModelState.AddModelError(string.Empty, error.Description);
+                    TempData.Danger(_loc.Text(error.Description).Value);
                 }
             }
 

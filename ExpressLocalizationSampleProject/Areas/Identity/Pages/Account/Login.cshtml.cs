@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.Globalization;
 using LazZiya.ExpressLocalization.Messages;
+using LazZiya.TagHelpers.Alerts;
+using LazZiya.ExpressLocalization;
+using ExpressLocalizationSampleProject.LocalizationResources;
 
 namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
 {
@@ -18,14 +21,15 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private SharedCultureLocalizer _loc;
 
         private readonly string _culture;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, SharedCultureLocalizer loc)
         {
             _signInManager = signInManager;
             _logger = logger;
-
+            _loc = loc;
             _culture = CultureInfo.CurrentCulture.Name;
         }
 
@@ -36,8 +40,8 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
 
         public string ReturnUrl { get; set; }
 
-        [TempData]
-        public string ErrorMessage { get; set; }
+        //[TempData]
+        //public string ErrorMessage { get; set; }
 
         public class InputModel
         {
@@ -57,11 +61,6 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
-            if (!string.IsNullOrEmpty(ErrorMessage))
-            {
-                ModelState.AddModelError(string.Empty, ErrorMessage);
-            }
-
             returnUrl = returnUrl ?? Url.Content($"~/{_culture}");
 
             // Clear the existing external cookie to ensure a clean login process
@@ -97,7 +96,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    TempData.Danger(_loc.Text(LocalizedBackendMessages.LoginInvalidAttempt).Value);
                     return Page();
                 }
             }

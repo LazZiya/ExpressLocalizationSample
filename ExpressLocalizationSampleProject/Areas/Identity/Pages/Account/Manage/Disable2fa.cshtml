@@ -3,9 +3,9 @@
 @{
     ViewData["Title"] = "Disable two-factor authentication (2FA)";
     ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+    var culture = CultureInfo.CurrentCulture.Name;
 }
 
-<partial name="_StatusMessage" for="StatusMessage" />
 <h1>@ViewData["Title"]</h1>
 
 <div class="alert alert-warning" role="alert">
@@ -15,7 +15,7 @@
     </p>
     <p>
         Disabling 2FA does not change the keys used in authenticator apps. If you wish to change the key
-        used in an authenticator app you should <a asp-page="./ResetAuthenticator">reset your authenticator keys.</a>
+        used in an authenticator app you should <a asp-page="./ResetAuthenticator" asp-route-culture="@culture">reset your authenticator keys.</a>
     </p>
 </div>
 

@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using ExpressLocalizationSampleProject.LocalizationResources;
+using LazZiya.ExpressLocalization;
+using LazZiya.ExpressLocalization.Messages;
+using LazZiya.TagHelpers.Alerts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -18,15 +23,20 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<ExternalLoginModel> _logger;
+        private readonly SharedCultureLocalizer _loc;
+        private readonly string culture;
 
         public ExternalLoginModel(
             SignInManager<IdentityUser> signInManager,
             UserManager<IdentityUser> userManager,
-            ILogger<ExternalLoginModel> logger)
+            ILogger<ExternalLoginModel> logger,
+            SharedCultureLocalizer loc)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _logger = logger;
+            _loc = loc;
+            culture = CultureInfo.CurrentCulture.Name;
         }
 
         [BindProperty]
@@ -36,46 +46,49 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
 
         public string ReturnUrl { get; set; }
 
-        [TempData]
-        public string ErrorMessage { get; set; }
+        //[TempData]
+        //public string ErrorMessage { get; set; }
 
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
+            [EmailAddress(ErrorMessage = DataAnnotationsErrorMessages.EmailAddressAttribute_Invalid)]
             public string Email { get; set; }
         }
 
         public IActionResult OnGetAsync()
         {
-            return RedirectToPage("./Login");
+            return RedirectToPage("./Login", new { culture });
         }
 
         public IActionResult OnPost(string provider, string returnUrl = null)
         {
             // Request a redirect to the external login provider.
-            var redirectUrl = Url.Page("./ExternalLogin", pageHandler: "Callback", values: new { returnUrl });
+            var redirectUrl = Url.Page("./ExternalLogin", pageHandler: "Callback", values: new { returnUrl, culture });
             var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
             return new ChallengeResult(provider, properties);
         }
 
         public async Task<IActionResult> OnGetCallbackAsync(string returnUrl = null, string remoteError = null)
         {
-            returnUrl = returnUrl ?? Url.Content("~/");
+            returnUrl = returnUrl ?? Url.Content($"~/{culture}");
             if (remoteError != null)
             {
-                ErrorMessage = $"Error from external provider: {remoteError}";
-                return RedirectToPage("./Login", new {ReturnUrl = returnUrl });
+                //ErrorMessage = $"Error from external provider: {remoteError}";
+                TempData.Danger(_loc.Text(LocalizedBackendMessages.ExternalLoginsProviderError, remoteError).Value);
+                return RedirectToPage("./Login", new { ReturnUrl = returnUrl, Culture = culture });
             }
             var info = await _signInManager.GetExternalLoginInfoAsync();
             if (info == null)
             {
-                ErrorMessage = "Error loading external login information.";
-                return RedirectToPage("./Login", new { ReturnUrl = returnUrl });
+                //ErrorMessage = "Error loading external login information.";
+                TempData.Danger(_loc.Text(LocalizedBackendMessages.ExternalLoginsLoadingError).Value);
+
+                return RedirectToPage("./Login", new { ReturnUrl = returnUrl, Culture = culture });
             }
 
             // Sign in the user with this external login provider if the user already has a login.
-            var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false, bypassTwoFactor : true);
+            var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false, bypassTwoFactor: true);
             if (result.Succeeded)
             {
                 _logger.LogInformation("{Name} logged in with {LoginProvider} provider.", info.Principal.Identity.Name, info.LoginProvider);
@@ -83,7 +96,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
             }
             if (result.IsLockedOut)
             {
-                return RedirectToPage("./Lockout");
+                return RedirectToPage("./Lockout", new { culture });
             }
             else
             {
@@ -108,8 +121,9 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
             var info = await _signInManager.GetExternalLoginInfoAsync();
             if (info == null)
             {
-                ErrorMessage = "Error loading external login information during confirmation.";
-                return RedirectToPage("./Login", new { ReturnUrl = returnUrl });
+                //ErrorMessage = "Error loading external login information during confirmation.";
+                TempData.Danger(_loc.Text(LocalizedBackendMessages.ExternalLoginsLoadingConfirmationError).Value);
+                return RedirectToPage("./Login", new { ReturnUrl = returnUrl, Culture = culture });
             }
 
             if (ModelState.IsValid)

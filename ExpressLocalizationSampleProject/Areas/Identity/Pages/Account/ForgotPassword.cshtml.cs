@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using ExpressLocalizationSampleProject.LocalizationResources;
+using LazZiya.ExpressLocalization;
+using LazZiya.ExpressLocalization.Messages;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -16,11 +20,13 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IEmailSender _emailSender;
+        private readonly SharedCultureLocalizer _loc;
 
-        public ForgotPasswordModel(UserManager<IdentityUser> userManager, IEmailSender emailSender)
+        public ForgotPasswordModel(UserManager<IdentityUser> userManager, IEmailSender emailSender, SharedCultureLocalizer loc)
         {
             _userManager = userManager;
             _emailSender = emailSender;
+            _loc = loc;
         }
 
         [BindProperty]
@@ -28,20 +34,22 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
+            [EmailAddress(ErrorMessage = DataAnnotationsErrorMessages.EmailAddressAttribute_Invalid)]
             public string Email { get; set; }
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
+            var culture = CultureInfo.CurrentCulture.Name;
+
             if (ModelState.IsValid)
             {
                 var user = await _userManager.FindByEmailAsync(Input.Email);
                 if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
                 {
                     // Don't reveal that the user does not exist or is not confirmed
-                    return RedirectToPage("./ForgotPasswordConfirmation");
+                    return RedirectToPage("./ForgotPasswordConfirmation", new { culture });
                 }
 
                 // For more information on how to enable account confirmation and password reset please 
@@ -50,15 +58,15 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
                 var callbackUrl = Url.Page(
                     "/Account/ResetPassword",
                     pageHandler: null,
-                    values: new { code },
+                    values: new { code, culture },
                     protocol: Request.Scheme);
 
                 await _emailSender.SendEmailAsync(
                     Input.Email,
-                    "Reset Password",
-                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    _loc.Text(LocalizedBackendMessages.ResetPasswordEmailTitle).Value,
+                    _loc.Text(LocalizedBackendMessages.ResetPasswordEmailBody, HtmlEncoder.Default.Encode(callbackUrl)).Value);
 
-                return RedirectToPage("./ForgotPasswordConfirmation");
+                return RedirectToPage("./ForgotPasswordConfirmation", new { culture });
             }
 
             return Page();

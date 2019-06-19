@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ExpressLocalizationSampleProject.LocalizationResources;
+using LazZiya.ExpressLocalization;
+using LazZiya.TagHelpers.Alerts;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -13,13 +16,16 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly SharedCultureLocalizer _loc;
 
         public ExternalLoginsModel(
             UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager)
+            SignInManager<IdentityUser> signInManager,
+            SharedCultureLocalizer loc)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _loc = loc;
         }
 
         public IList<UserLoginInfo> CurrentLogins { get; set; }
@@ -28,8 +34,8 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
 
         public bool ShowRemoveButton { get; set; }
 
-        [TempData]
-        public string StatusMessage { get; set; }
+        //[TempData]
+        //public string StatusMessage { get; set; }
 
         public async Task<IActionResult> OnGetAsync()
         {
@@ -63,7 +69,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
             }
 
             await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "The external login was removed.";
+            TempData.Success(_loc.Text(LocalizedBackendMessages.ExternalLoginsRemoveSuccess).Value);
             return RedirectToPage();
         }
 
@@ -101,7 +107,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
             // Clear the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
-            StatusMessage = "The external login was added.";
+            TempData.Success(_loc.Text(LocalizedBackendMessages.ExternalLoginsAddSuccess).Value);
             return RedirectToPage();
         }
     }

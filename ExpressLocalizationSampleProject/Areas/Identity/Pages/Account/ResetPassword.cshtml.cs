@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using LazZiya.ExpressLocalization;
+using LazZiya.ExpressLocalization.Messages;
+using LazZiya.TagHelpers.Alerts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -14,10 +18,12 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
     public class ResetPasswordModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly SharedCultureLocalizer _loc;
 
-        public ResetPasswordModel(UserManager<IdentityUser> userManager)
+        public ResetPasswordModel(UserManager<IdentityUser> userManager, SharedCultureLocalizer loc)
         {
             _userManager = userManager;
+            _loc = loc;
         }
 
         [BindProperty]
@@ -25,18 +31,18 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
+            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
             [EmailAddress]
             public string Email { get; set; }
 
-            [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
+            [StringLength(100, ErrorMessage = DataAnnotationsErrorMessages.StringLengthAttribute_ValidationErrorIncludingMinimum, MinimumLength = 6)]
             [DataType(DataType.Password)]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Compare("Password", ErrorMessage = DataAnnotationsErrorMessages.CompareAttribute_MustMatch)]
             public string ConfirmPassword { get; set; }
 
             public string Code { get; set; }
@@ -60,6 +66,8 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync()
         {
+            var culture = CultureInfo.CurrentCulture.Name;
+
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -69,18 +77,19 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
             if (user == null)
             {
                 // Don't reveal that the user does not exist
-                return RedirectToPage("./ResetPasswordConfirmation");
+                return RedirectToPage("./ResetPasswordConfirmation", new { culture });
             }
 
             var result = await _userManager.ResetPasswordAsync(user, Input.Code, Input.Password);
             if (result.Succeeded)
             {
-                return RedirectToPage("./ResetPasswordConfirmation");
+                return RedirectToPage("./ResetPasswordConfirmation", new { culture });
             }
 
             foreach (var error in result.Errors)
             {
-                ModelState.AddModelError(string.Empty, error.Description);
+                //ModelState.AddModelError(string.Empty, error.Description);
+                TempData.Danger(_loc.Text(error.Description).Value);
             }
             return Page();
         }
