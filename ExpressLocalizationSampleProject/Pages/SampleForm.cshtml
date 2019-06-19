@@ -2,7 +2,7 @@
 @model ExpressLocalizationSampleProject.Pages.SampleFormModel
 
 @{
-    ViewData["Title"] = _loc.Text("Sample Form");
+    ViewData["Title"] = "Sample Form";
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -28,7 +28,7 @@
         <input asp-for="Test.Date" class="form-control" />
         <span asp-validation-for="Test.Date" class="text-danger"></span>
     </div>
-    <button type="submit" value="Submit" class="btn btn-primary">@_loc.Text("Submit")</button>
+    <button type="submit" value="Submit" class="btn btn-primary" localize-content>Submit</button>
 </form>
 
 @section Scripts{ 
