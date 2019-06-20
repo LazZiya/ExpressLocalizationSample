@@ -3,7 +3,7 @@ Basic Asp.Net Core 2.2 project based localized using [LazZiya.ExpressLocalizatio
 The project is based on original template from Asp.NetCore 2.2.
 
 ## Localized parts
- - Razor Views (Identity views to be done)
+ - Razor Views (All views locailzed with [LocalizeTagHelper](https://github.com/lazziya/TagHelpers.Localization))
  - DataAnnotations
  - ModelBinding error messages
  - IdentityErrorDescriber messages
@@ -11,6 +11,7 @@ The project is based on original template from Asp.NetCore 2.2.
  - Client side localize valdiation scripts
  
 ## Available Cultures
+_some cultures needs fixing/adding few translations_
  - Arabic
  - Chinese
  - Czech
@@ -42,6 +43,8 @@ http://ziyad.info/en/articles/36-Develop_Multi_Cultural_Web_Application_Using_Ex
 Some parts of this project is using [LazZiya.TagHelpers](https://github.com/LazZiya/TagHelpers) like:
  - LanguageNav dropdown
  - Client side validation scripts
+ - AlertTagHelper for bootstrap 4 alerts
+ - Localization of razor views done with [LocalizeTagHelper](https://github.com/lazziya/TagHelpers.Localization).
 
 ## License:
 MIT
