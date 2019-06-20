@@ -485,4 +485,28 @@
     <value>'{0}' और '{1} 'मेल नहीं खाते।</value>
     <comment>DataAnnotations: CompareAttribute_MustMatch</comment>
   </data>
+  <data name="Current password" xml:space="preserve">
+    <value>वर्तमान पासवर्ड!</value>
+  </data>
+  <data name="New password" xml:space="preserve">
+    <value>नया पासवर्ड!</value>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>टेलिफोन क्रमांक</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>उपयोक्ता नाम</value>
+  </data>
+  <data name="Verification code" xml:space="preserve">
+    <value>पुष्टि कोड!</value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>मुझे याद करो!</value>
+  </data>
+  <data name="Remember this machine?" xml:space="preserve">
+    <value>क्या आपको यह डिवाइस याद है!</value>
+  </data>
+  <data name="Confirm new password" xml:space="preserve">
+    <value>अपने नए पासवर्ड की पुष्टि करें!</value>
+  </data>
 </root>

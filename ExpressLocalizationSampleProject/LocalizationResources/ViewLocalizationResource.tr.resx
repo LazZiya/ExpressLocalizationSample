@@ -155,7 +155,7 @@
     &lt;/ P&gt;</value>
     <comment>Pages/Error.cshtml</comment>
   </data>
-  <data name="&lt;p&gt;Your account contains personal data that you have given us. This page allows you to download or delete that data.&lt;/p&gt;&lt;p&gt;&#xA;&lt;strong&gt;Deleting this data will permanently remove your account, and this cannot be recovered.&lt;/strong&gt;&lt;/p&gt;" xml:space="preserve">
+  <data name="&lt;p&gt;Your account contains personal data that you have given us. This page allows you to download or delete that data.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deleting this data will permanently remove your account, and this cannot be recovered.&lt;/strong&gt;&lt;/p&gt;" xml:space="preserve">
     <value>&lt;P&gt; Hesabınız Bize verdiğiniz kişisel verileri içerir. Bu sayfa, bu verileri indirmek veya silmenizi sağlar. &lt;/ P&gt;
             &lt;P&gt;
                 &lt;Strong&gt; Bu verileri silme hesabınızı kalıcı kaldırır ve bu geri alınamaz. &lt;/ Strong&gt;
@@ -607,5 +607,9 @@
   <data name="Your profile has been updated" xml:space="preserve">
     <value>Profiliniz güncellendi</value>
     <comment>Custom back end message</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Sil</value>
+    <comment>PersonalData.cshtml</comment>
   </data>
 </root>

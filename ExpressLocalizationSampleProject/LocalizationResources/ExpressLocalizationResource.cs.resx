@@ -485,4 +485,28 @@
     <value>'{0}‘a '{1}' se neshodují.</value>
     <comment>DataAnnotations: CompareAttribute_MustMatch</comment>
   </data>
+  <data name="Current password" xml:space="preserve">
+    <value>Aktuální heslo!</value>
+  </data>
+  <data name="New password" xml:space="preserve">
+    <value>Nové heslo!</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>&amp; Přejmenovat</value>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>Ještě telefon.</value>
+  </data>
+  <data name="Verification code" xml:space="preserve">
+    <value>Potvrzovací kód!</value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>Vzpomeň si na mě!</value>
+  </data>
+  <data name="Remember this machine?" xml:space="preserve">
+    <value>Vzpomínáte si na toto zařízení?</value>
+  </data>
+  <data name="Confirm new password" xml:space="preserve">
+    <value>Potvrďte své nové heslo!</value>
+  </data>
 </root>

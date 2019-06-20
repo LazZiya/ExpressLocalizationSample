@@ -485,4 +485,28 @@
     <value>{0}」と「{1}と一致しません。</value>
     <comment>DataAnnotations: CompareAttribute_MustMatch</comment>
   </data>
+  <data name="Current password" xml:space="preserve">
+    <value>現在のパスワード</value>
+  </data>
+  <data name="New password" xml:space="preserve">
+    <value>新しいパスワード</value>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>電話番号</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>over interface</value>
+  </data>
+  <data name="Verification code" xml:space="preserve">
+    <value>確認コード</value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>私を覚えている！</value>
+  </data>
+  <data name="Remember this machine?" xml:space="preserve">
+    <value>あなたはこの装置を覚えていますか？</value>
+  </data>
+  <data name="Confirm new password" xml:space="preserve">
+    <value>新しいパスワードを確認してください。</value>
+  </data>
 </root>

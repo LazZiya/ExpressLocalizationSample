@@ -485,4 +485,28 @@
     <value>'{0}' e '{1}' non corrispondono.</value>
     <comment>DataAnnotations: CompareAttribute_MustMatch</comment>
   </data>
+  <data name="Current password" xml:space="preserve">
+    <value>Password corrente!</value>
+  </data>
+  <data name="New password" xml:space="preserve">
+    <value>Nuova Password</value>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>N. Cellulare</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="Verification code" xml:space="preserve">
+    <value>Conferma</value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>Ricordami</value>
+  </data>
+  <data name="Remember this machine?" xml:space="preserve">
+    <value>Ti ricordi questo dispositivo ?!</value>
+  </data>
+  <data name="Confirm new password" xml:space="preserve">
+    <value>Conferma la tua nuova password!</value>
+  </data>
 </root>

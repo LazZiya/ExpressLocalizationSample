@@ -485,4 +485,28 @@
     <value>'{0} 'و' {1} 'مطابقت ندارند.</value>
     <comment>DataAnnotations: CompareAttribute_MustMatch</comment>
   </data>
+  <data name="Current password" xml:space="preserve">
+    <value>رمز عبور فعلی!</value>
+  </data>
+  <data name="New password" xml:space="preserve">
+    <value>رمز عبور جدید</value>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>شماره تلفن</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>نام‌کاربری</value>
+  </data>
+  <data name="Verification code" xml:space="preserve">
+    <value>کد تأیید</value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>منو بخاطر بيار.</value>
+  </data>
+  <data name="Remember this machine?" xml:space="preserve">
+    <value>آیا این دستگاه را به یاد می آورید؟!</value>
+  </data>
+  <data name="Confirm new password" xml:space="preserve">
+    <value>رمز عبور جدید خود را تایید کنید</value>
+  </data>
 </root>

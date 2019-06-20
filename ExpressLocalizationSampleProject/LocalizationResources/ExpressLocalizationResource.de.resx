@@ -485,4 +485,28 @@
     <value>{0} ist ungültig.</value>
     <comment>DataAnnotations: CustomValidationAttribute_ValidationError</comment>
   </data>
+  <data name="Current password" xml:space="preserve">
+    <value>Aktuelles Passwort!</value>
+  </data>
+  <data name="New password" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>Telefonnummer:</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="Verification code" xml:space="preserve">
+    <value>Bestätigungscode</value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="Remember this machine?" xml:space="preserve">
+    <value>Erinnerst du dich an dieses Gerät ?!</value>
+  </data>
+  <data name="Confirm new password" xml:space="preserve">
+    <value>Confirm New Password</value>
+  </data>
 </root>

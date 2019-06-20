@@ -485,4 +485,28 @@
     <value>كلمة المرور</value>
     <comment>DataAnnotations: Custom value</comment>
   </data>
+  <data name="Current password" xml:space="preserve">
+    <value>كلمة المرور الحالية</value>
+  </data>
+  <data name="New password" xml:space="preserve">
+    <value>كلمة المرور الجديدة</value>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="Verification code" xml:space="preserve">
+    <value>رمز التأكيد</value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>تذكرني</value>
+  </data>
+  <data name="Remember this machine?" xml:space="preserve">
+    <value>تدكر هذا الجهاز؟</value>
+  </data>
+  <data name="Confirm new password" xml:space="preserve">
+    <value>تأكيد كلمة المرور الجديدة</value>
+  </data>
 </root>

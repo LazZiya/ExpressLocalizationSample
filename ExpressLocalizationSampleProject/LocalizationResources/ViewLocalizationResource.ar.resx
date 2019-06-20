@@ -608,4 +608,8 @@
     <value>تم تحديث ملفك الشخصي</value>
     <comment>Custom back end message</comment>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+    <comment>PersonalData.cshtml</comment>
+  </data>
 </root>

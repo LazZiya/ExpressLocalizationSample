@@ -485,4 +485,28 @@
     <value>'{0}”és '{1}' nem egyeznek.</value>
     <comment>DataAnnotations: CompareAttribute_MustMatch</comment>
   </data>
+  <data name="Current password" xml:space="preserve">
+    <value>Jelenlegi jelszó!</value>
+  </data>
+  <data name="New password" xml:space="preserve">
+    <value>Új jelszó!</value>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>Telefonszám!</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>&amp; Felhasználónév:</value>
+  </data>
+  <data name="Verification code" xml:space="preserve">
+    <value>Megerősítési kód!</value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>Emlékezz rám!</value>
+  </data>
+  <data name="Remember this machine?" xml:space="preserve">
+    <value>Emlékszik erre az eszközre?</value>
+  </data>
+  <data name="Confirm new password" xml:space="preserve">
+    <value>Erősítse meg új jelszavát!</value>
+  </data>
 </root>

@@ -485,4 +485,28 @@
     <value>'{0}' en '{1}' niet overeenkomen.</value>
     <comment>DataAnnotations: CompareAttribute_MustMatch</comment>
   </data>
+  <data name="Current password" xml:space="preserve">
+    <value>Huidig wachtwoord!</value>
+  </data>
+  <data name="New password" xml:space="preserve">
+    <value>Nieuw wachtwoord!</value>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>Telefoonnummer!</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Gebruikersnaam</value>
+  </data>
+  <data name="Verification code" xml:space="preserve">
+    <value>Bevestigingscode!</value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>Onthoud mij!</value>
+  </data>
+  <data name="Remember this machine?" xml:space="preserve">
+    <value>Herinner je je dit apparaat?</value>
+  </data>
+  <data name="Confirm new password" xml:space="preserve">
+    <value>Bevestig uw nieuwe wachtwoord!</value>
+  </data>
 </root>
