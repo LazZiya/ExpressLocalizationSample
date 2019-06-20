@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using LazZiya.TagHelpers.Alerts;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ExpressLocalizationSampleProject.Pages
 {
@@ -6,7 +7,6 @@ namespace ExpressLocalizationSampleProject.Pages
     {
         public void OnGet()
         {
-            
         }
     }
 }

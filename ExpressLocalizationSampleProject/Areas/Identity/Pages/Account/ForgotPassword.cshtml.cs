@@ -36,6 +36,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
         {
             [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
             [EmailAddress(ErrorMessage = DataAnnotationsErrorMessages.EmailAddressAttribute_Invalid)]
+            [Display(Name = "Email")]
             public string Email { get; set; }
         }
 

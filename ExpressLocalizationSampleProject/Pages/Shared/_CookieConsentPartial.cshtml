@@ -5,14 +5,20 @@
     var showBanner = !consentFeature?.CanTrack ?? false;
     var cookieString = consentFeature?.CreateConsentCookie();
     var culture = CultureInfo.CurrentCulture.Name;
+    var locArgs = new[]
+    {
+        Url.Page("/Privacy", null, new{culture}),
+        cookieString,
+
+    };
 }
 
 @if (showBanner)
 {
-    <div id="cookieConsent" class="alert alert-info alert-dismissible fade show" role="alert">
-        <localize>Use this space to summarize your privacy and cookie use policy.</localize> <a asp-page="/Privacy" asp-route-culture="@culture" localize-content>Learn More</a>.
-        <button type="button" class="accept-policy close" data-dismiss="alert" aria-label="Close" data-cookie-string="@cookieString">
-            <span aria-hidden="true" localize-content>Accept</span>
+    <div id="cookieConsent" class="alert alert-info alert-dismissible fade show" role="alert" localize-args="@locArgs">
+        Use this space to summarize your privacy and cookie use policy. <a href="{0}">Learn More</a>.
+        <button type="button" class="accept-policy close" data-dismiss="alert" aria-label="Close" data-cookie-string="{1}">
+            <span aria-hidden="true">Accept</span>
         </button>
     </div>
     <script>

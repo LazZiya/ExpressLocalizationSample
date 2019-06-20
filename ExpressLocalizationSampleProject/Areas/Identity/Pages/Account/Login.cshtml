@@ -2,7 +2,7 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Log in";
     var culture = CultureInfo.CurrentCulture.Name;
 }
 
@@ -29,7 +29,7 @@
                     <div class="checkbox">
                         <label asp-for="Input.RememberMe">
                             <input asp-for="Input.RememberMe" />
-                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                <localize>Remember me?</localize>
                         </label>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                             <p>
                                 @foreach (var provider in Model.ExternalLogins)
                                 {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name"  localize-att-title="Log in using your external account">@provider.DisplayName</button>
+                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" localize-att-title="Log in using your external account">@provider.DisplayName</button>
                                 }
                             </p>
                         </div>
