@@ -60,6 +60,7 @@ namespace ExpressLocalizationSampleProject
                 new CultureInfo("nl"),
                 new CultureInfo("pl"),
                 new CultureInfo("pt"),
+                new CultureInfo("pt-br"),
                 new CultureInfo("ru"),
                 new CultureInfo("sv"),
                 new CultureInfo("tr"),
