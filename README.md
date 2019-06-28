@@ -27,6 +27,7 @@ _some cultures needs fixing/adding few translations_
  - Persian
  - Polish
  - Portuguese
+ - Portuguese Brazil (by [@ismaelgasparin](https://github.com/ismaelgasparin))
  - Russian
  - Spanish
  - Swedish
@@ -46,5 +47,12 @@ Some parts of this project is using [LazZiya.TagHelpers](https://github.com/LazZ
  - AlertTagHelper for bootstrap 4 alerts
  - Localization of razor views done with [LocalizeTagHelper](https://github.com/lazziya/TagHelpers.Localization).
 
+## Contributers
+Contributer | Role
+--- | ---
+ [@LazZiya](https://github.com/LazZiya) | Owner
+ [@ismaelgasparin](https://github.com/ismaelgasparin)  | Portuguese language
+ 
+ 
 ## License:
 MIT
