@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.IO;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using ExpressLocalizationSampleProject.LocalizationResources;
@@ -89,9 +90,12 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
                         values: new { userId = user.Id, code = code },
                         protocol: Request.Scheme);
 
+                    var wr = new StringWriter();
+                    _loc.Text(LocalizedBackendMessages.VerificationEmailBody, HtmlEncoder.Default.Encode(callbackUrl)).WriteTo(wr, HtmlEncoder.Default);
+
                     await _emailSender.SendEmailAsync(Input.Email, 
                         _loc.Text(LocalizedBackendMessages.VerificationEmailTitle).Value,
-                        _loc.Text(LocalizedBackendMessages.VerificationEmailBody, HtmlEncoder.Default.Encode(callbackUrl)).Value);
+                        wr.ToString());
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     return LocalRedirect(returnUrl);

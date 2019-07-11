@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.IO;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using ExpressLocalizationSampleProject.LocalizationResources;
@@ -62,10 +63,13 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
                     values: new { code, culture },
                     protocol: Request.Scheme);
 
+                var wr = new StringWriter();
+                _loc.Text(key:LocalizedBackendMessages.ResetPasswordEmailBody, args: HtmlEncoder.Default.Encode(callbackUrl)).WriteTo(wr, HtmlEncoder.Default);
+
                 await _emailSender.SendEmailAsync(
                     Input.Email,
                     _loc.Text(LocalizedBackendMessages.ResetPasswordEmailTitle).Value,
-                    _loc.Text(LocalizedBackendMessages.ResetPasswordEmailBody, HtmlEncoder.Default.Encode(callbackUrl)).Value);
+                    wr.ToString());
 
                 return RedirectToPage("./ForgotPasswordConfirmation", new { culture });
             }

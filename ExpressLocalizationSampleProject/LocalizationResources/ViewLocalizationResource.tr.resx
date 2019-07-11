@@ -164,17 +164,17 @@
   </data>
   <data name="&lt;strong&gt;You have 1 recovery code left.&lt;/strong&gt;&#xA;            &lt;p&gt;You can &lt;a href=&quot;{0}&quot;&gt;generate a new set of recovery codes&lt;/a&gt;.&lt;/p&gt;" xml:space="preserve">
     <value>&lt;Strong&gt; 1 kurtarma kodu bıraktık. &lt;/ Strong&gt;
-            &lt;P&gt; href="{0}"&gt; Kurtarma kodlarının yeni bir dizi oluşturmak yapabilirsiniz &lt;/a&gt;. &lt;/ P&gt;</value>
+            &lt;P&gt; &lt;a href="{0}"&gt; Kurtarma kodlarının yeni bir dizi oluşturmak yapabilirsiniz &lt;/a&gt;. &lt;/ P&gt;</value>
     <comment>Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml</comment>
   </data>
   <data name="&lt;strong&gt;You have no recovery codes left.&lt;/strong&gt;&#xA;            &lt;p&gt;You must &lt;a href=&quot;{0}&quot;&gt;generate a new set of recovery codes&lt;/a&gt; before you can log in with a recovery code.&lt;/p&gt;" xml:space="preserve">
     <value>&lt;Strong&gt; sol herhangi bir kurtarma kodları var. &lt;/ Strong&gt;
-            &lt;P&gt; bir kurtarma kodu ile giriş yapmadan önce href="{0}"&gt; &lt;/a&gt; kurtarma kodları yeni bir dizi oluşturmak &lt;/a&gt; gerekir. &lt;/ P&gt;</value>
+            &lt;P&gt; Giriş yapmadan önce &lt;a href="{0}"&gt;yeni bir dizi kurtarma kodları oluşturmak &lt;/a&gt; gerekir. &lt;/ P&gt;</value>
     <comment>Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml</comment>
   </data>
   <data name="&lt;strong&gt;You have {0} recovery codes left.&lt;/strong&gt;&#xA;            &lt;p&gt;You should &lt;a href=&quot;{1}&quot;&gt;generate a new set of recovery codes&lt;/a&gt;.&lt;/p&gt;" xml:space="preserve">
     <value>&lt;Strong&gt; {0} kurtarma kodları bıraktık. &lt;/ Strong&gt;
-            &lt;P&gt; href="{1}"&gt; Kurtarma kodlarının yeni bir dizi oluşturmak &lt;a gerektiğini &lt;/a&gt;. &lt;/ P&gt;</value>
+            &lt;P&gt;&lt;a href="{1}"&gt; Kurtarma kodlarının yeni bir dizi oluşturmak &lt;a gerektiğini &lt;/a&gt;. &lt;/ P&gt;</value>
     <comment>Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml</comment>
   </data>
   <data name="Access denied" xml:space="preserve">
@@ -230,7 +230,7 @@
     <comment>Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml</comment>
   </data>
   <data name="Don't have access to your authenticator device? You can &lt;a id=&quot;recovery-code-login&quot; href=&quot;{0}&quot;&gt;log in with a recovery code&lt;/a&gt;." xml:space="preserve">
-    <value>senin doğrulayıcı cihaza erişim yok mu? Bir kurtarma kodu &lt;/a&gt; ile oturum href="{0}"&gt; id="recovery-code-login" &lt;/a&gt;.</value>
+    <value>senin doğrulayıcı cihaza erişim yok mu? &lt;a id="recovery-code-login" href="{0}"&gt;Bir kurtarma kodu ile oturum aç&lt;/a&gt;.</value>
     <comment>Areas/Identity/Pages/Account/LoginWith2fa.cshtml</comment>
   </data>
   <data name="Download" xml:space="preserve">
@@ -238,7 +238,7 @@
     <comment>Areas/Identity/Pages/Account/Manage/PersonalData.cshtml</comment>
   </data>
   <data name="Download a two-factor authenticator app like Microsoft Authenticator for &lt;a href=&quot;{0}&quot;&gt;Windows Phone&lt;/a&gt;, &lt;a href=&quot;{1}&quot;&gt;Android&lt;/a&gt; and &lt;a href=&quot;{2}&quot;&gt;iOS&lt;/a&gt; or" xml:space="preserve">
-    <value>{ "= &lt;a href="{0}"&gt; Windows Phone &lt;/a&gt; &lt;a href="{1}"&gt; Android &lt;/a&gt; ve &lt;a href için Microsoft Authenticator'a gibi iki faktörlü kimlik doğrulayıcı uygulamasını indirin 2} "&gt; iOS &lt;/a&gt; veya</value>
+    <value>Microsoft Authenticator gibi iki faktörlü kimlik doğrulayıcı uygulamasını indirin &lt;a href="{0}"&gt; Windows Phone &lt;/a&gt;, &lt;a href="{1}"&gt; Android &lt;/a&gt; ve &lt;a href="{2} "&gt; iOS &lt;/a&gt; veya</value>
     <comment>Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml</comment>
   </data>
   <data name="Download Your Data" xml:space="preserve">
@@ -289,8 +289,8 @@
     <value>iki faktörlü kimlik doğrulama (2FA) kurtarma kodlar oluştur</value>
     <comment>Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml</comment>
   </data>
-  <data name="Google Authenticator for &lt;a href=&quot;{3}&quot;&gt;Android&lt;/a&gt; and &lt;a href=&quot;{4}&quot;&gt;iOS&lt;/a&gt;." xml:space="preserve">
-    <value>&lt;a için Google Şifrematik Android &lt;/a&gt; ve &lt;a href="{4}"&gt; iOS &lt;/a&gt; href="{3}"&gt;.</value>
+  <data name="Google Authenticator for &lt;a href=&quot;{0}&quot;&gt;Android&lt;/a&gt; and &lt;a href=&quot;{1}&quot;&gt;iOS&lt;/a&gt;." xml:space="preserve">
+    <value>Google Şifrematik &lt;a href="{0}"&gt;Android&lt;/a&gt; ve &lt;a href="{1}"&gt; iOS &lt;/a&gt; için.</value>
     <comment>Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml</comment>
   </data>
   <data name="Hello {0}!" xml:space="preserve">
@@ -314,7 +314,7 @@
     <comment>Custom back end message</comment>
   </data>
   <data name="Learn about &lt;a href=&quot;{0}&quot;&gt;building Web apps with ASP.NET Core&lt;/a&gt;." xml:space="preserve">
-    <value>ASP.NET Çekirdek &lt;/a&gt; &lt;a href="{0}"&gt; bina Web uygulamaları hakkında bilgi edinin.</value>
+    <value>&lt;a href="{0}"&gt;ASP.NET Core Web Uygulamaları&lt;/a&gt; hakkında bilgi edinin.</value>
     <comment>Pages/Index.cshtml</comment>
   </data>
   <data name="Locked out" xml:space="preserve">
@@ -370,7 +370,7 @@
     <comment>Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml</comment>
   </data>
   <data name="Please confirm your account by &lt;a href='{0}'&gt;clicking here&lt;/a&gt;." xml:space="preserve">
-    <value>burada &lt;/a&gt; tıklayarak &lt;a href='{0}'&gt; hesabınızı teyit edin.</value>
+    <value>hesabınızı teyit etmek için &lt;a href='{0}'&gt;buraya&lt;/a&gt; tıklayın.</value>
     <comment>Custom back end message</comment>
   </data>
   <data name="Please enter a valid number." xml:space="preserve">
@@ -378,7 +378,7 @@
     <comment>Pages/SampleForm.cshtml</comment>
   </data>
   <data name="Please reset your password by &lt;a href='{0}'&gt;clicking here&lt;/a&gt;." xml:space="preserve">
-    <value>burada &lt;/a&gt; tıklayarak &lt;a href='{0}'&gt; şifrenizi sıfırlayın.</value>
+    <value>şifrenizi sıfırlamak için &lt;a href='{0}'&gt;buraya&lt;/a&gt; tıklayın.</value>
     <comment>Custom back end message</comment>
   </data>
   <data name="Privacy" xml:space="preserve">
@@ -534,10 +534,10 @@
     <comment>Pages/Privacy.cshtml</comment>
   </data>
   <data name="Use this space to summarize your privacy and cookie use policy. &lt;a href=&quot;{0}&quot;&gt;Learn More&lt;/a&gt;.&#xA;        &lt;button type=&quot;button&quot; class=&quot;accept-policy close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot; data-cookie-string=&quot;{1}&quot;&gt;&#xA;            &lt;span aria-hidden=&quot;true&quot;&gt;Accept&lt;/span&gt;&#xA;        &lt;/button&gt;" xml:space="preserve">
-    <value>Gizlilik ve çerez kullanımı politikasını özetlemek için bu alanı kullanın. &lt;a Daha fazla bilgi &lt;/a&gt; href="{0}"&gt;.
-        &lt;Düğme type = "button" class = "kabul-policy yakın" = = aria-label = "Kapat" veri-cookie-string "uyarmak" veri görevden "{1}"&gt;
-            &lt;Span arya-gizli = "true"&gt; Kabul et &lt;/ span&gt;
-        &lt;/ Düğmesi&gt;</value>
+    <value>Gizlilik ve çerez kullanımı politikasını özetlemek için bu alanı kullanın. &lt;a href="{0}"&gt;Daha fazla bilgi &lt;/a&gt;.
+  &lt;button type="button" class="accept-policy close" data-dismiss="alert" aria-label="Close" data-cookie-string="{1}"&gt;
+            &lt;span aria-hidden="true"&gt;Kabul et&lt;/span&gt;
+        &lt;/button&gt;</value>
     <comment>Pages/Shared/_CookieConsentPartial.cshtml</comment>
   </data>
   <data name="Verification Code" xml:space="preserve">
@@ -597,7 +597,7 @@
     <comment>Custom back end message</comment>
   </data>
   <data name="Your password has been reset. Please &lt;a href=&quot;{0}&quot;&gt;click here to log in&lt;/a&gt;." xml:space="preserve">
-    <value>Şifreniz sıfırlandı. &lt;/a&gt; Giriş yapmak için buraya tıklayın href="{0}"&gt; lütfen &lt;a.</value>
+    <value>Şifreniz sıfırlandı. Giriş yapmak için lütfen &lt;a href="{0}"&gt;buraya&lt;/a&gt; tıklayın.</value>
     <comment>Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml</comment>
   </data>
   <data name="Your password has been set." xml:space="preserve">

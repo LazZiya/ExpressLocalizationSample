@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Security.Claims;
+using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using ExpressLocalizationSampleProject.LocalizationResources;
 using LazZiya.ExpressLocalization;
@@ -74,8 +76,10 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content($"~/{culture}");
             if (remoteError != null)
             {
+                var wr = new StringWriter();
+                _loc.Text(LocalizedBackendMessages.ExternalLoginsProviderError, remoteError).WriteTo(wr, HtmlEncoder.Default);
                 //ErrorMessage = $"Error from external provider: {remoteError}";
-                TempData.Danger(_loc.Text(LocalizedBackendMessages.ExternalLoginsProviderError, remoteError).Value);
+                TempData.Danger(wr.ToString());
                 return RedirectToPage("./Login", new { ReturnUrl = returnUrl, Culture = culture });
             }
             var info = await _signInManager.GetExternalLoginInfoAsync();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
@@ -143,10 +144,13 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
                 pageHandler: null,
                 values: new { userId = userId, code = code, culture= CultureInfo.CurrentCulture.Name },
                 protocol: Request.Scheme);
+
+            var wr = new StringWriter();
+            _loc.Text(LocalizedBackendMessages.VerificationEmailBody, HtmlEncoder.Default.Encode(callbackUrl)).WriteTo(wr, HtmlEncoder.Default);
             await _emailSender.SendEmailAsync(
                 email,
                 _loc.Text(LocalizedBackendMessages.VerificationEmailTitle).Value,
-                _loc.Text(LocalizedBackendMessages.VerificationEmailBody, HtmlEncoder.Default.Encode(callbackUrl)).Value);
+                wr.ToString());
 
             //StatusMessage = "Verification email sent. Please check your email.";
             TempData.Info(_loc.Text(LocalizedBackendMessages.VerificationEmailSent).Value);
