@@ -1,14 +1,19 @@
 # ExpressLocalizationSample
-Basic Asp.Net Core 2.2 project based localized using [LazZiya.ExpressLocalization](https://github.com/LazZiya/ExpressLocalization).
-The project is based on original template from Asp.NetCore 2.2.
+Fully localized project, based on the basic Asp.Net Core 2.2 template from Visual Studio, localized using [LazZiya.ExpressLocalization](https://github.com/LazZiya/ExpressLocalization).
 
-## Localized parts
- - Razor Views (All views locailzed with [LocalizeTagHelper](https://github.com/lazziya/TagHelpers.Localization))
- - DataAnnotations
- - ModelBinding error messages
- - IdentityErrorDescriber messages
- - Route value based request culture provider
- - Client side localize valdiation scripts
+
+## Features :
+ - Custom (route value) RequestCultureProvider
+ - Custom IHtmlStringLocalizer
+ - Custom [LocalizeTagHelper](https://github.com/lazziya/TagHelpers.Localization)
+ - Validating localized input fields e.g. (12,34 and 12.34)
+ - Localization of:
+   - Razor Views (All views locailzed with [LocalizeTagHelper](https://github.com/lazziya/TagHelpers.Localization))
+   - DataAnnotations
+   - Model binding and model validation error messages
+   - IdentityErrorDescriber messages
+   - Client side validation error messages
+
  
 ## Available Cultures
 _some cultures needs fixing/adding few translations_
@@ -27,6 +32,7 @@ _some cultures needs fixing/adding few translations_
  - Persian
  - Polish
  - Portuguese
+ - Portuguese Brazil (by [@ismaelgasparin](https://github.com/ismaelgasparin))
  - Russian
  - Spanish
  - Swedish
@@ -46,5 +52,12 @@ Some parts of this project is using [LazZiya.TagHelpers](https://github.com/LazZ
  - AlertTagHelper for bootstrap 4 alerts
  - Localization of razor views done with [LocalizeTagHelper](https://github.com/lazziya/TagHelpers.Localization).
 
+## Contributers
+Contributer | Role
+--- | ---
+ [@LazZiya](https://github.com/LazZiya) | Owner
+ [@ismaelgasparin](https://github.com/ismaelgasparin)  | Portuguese language
+ 
+ 
 ## License:
 MIT
