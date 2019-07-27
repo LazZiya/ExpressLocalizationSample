@@ -146,7 +146,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
                 protocol: Request.Scheme);
 
             var wr = new StringWriter();
-            _loc.Text(LocalizedBackendMessages.VerificationEmailBody, HtmlEncoder.Default.Encode(callbackUrl)).WriteTo(wr, HtmlEncoder.Default);
+            _loc.Text(LocalizedBackendMessages.VerificationEmailBody, args: HtmlEncoder.Default.Encode(callbackUrl)).WriteTo(wr, HtmlEncoder.Default);
             await _emailSender.SendEmailAsync(
                 email,
                 _loc.Text(LocalizedBackendMessages.VerificationEmailTitle).Value,

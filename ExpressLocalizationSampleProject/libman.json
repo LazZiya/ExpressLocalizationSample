@@ -2,6 +2,22 @@
   "version": "1.0",
   "defaultProvider": "jsdelivr",
   "libraries": [
+    /*
+
+      Below libraries are required for localizing client side validation error messages
+      and to validate localized input e.g. decimal numbers 1,2 -1.2 
+ 
+      This project uses "LocalizationValidationScriptsTagHelperComponent" 
+      to include all necessary libraries from jsdelivr at run time,
+      see: http://www.ziyad.info/en/articles/34-Localization_Validation_Scripts
+ 
+      However, if you prefer to use local copies of these libraries you can 
+      do so by uncommenting below lines and following this article:
+      http://www.ziyad.info/en/articles/35-How_to_install_client_side_validation_scripts
+
+    */
+
+    /***
     {
       "library": "cldrjs@0.5.1",
       "destination": "wwwroot/lib/cldr"
@@ -14,5 +30,7 @@
       "library": "globalize@1.4.2",
       "destination": "wwwroot/lib/globalize"
     }
+
+    ***/
   ]
 }

@@ -85,15 +85,15 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     var callbackUrl = Url.Page(
-                        $"/{_culture}/Account/ConfirmEmail",
+                        $"/Account/ConfirmEmail",
                         pageHandler: null,
-                        values: new { userId = user.Id, code = code },
+                        values: new { userId = user.Id, code = code, culture = _culture },
                         protocol: Request.Scheme);
 
                     var wr = new StringWriter();
-                    _loc.Text(LocalizedBackendMessages.VerificationEmailBody, HtmlEncoder.Default.Encode(callbackUrl)).WriteTo(wr, HtmlEncoder.Default);
+                    _loc.Text(LocalizedBackendMessages.VerificationEmailBody, args: HtmlEncoder.Default.Encode(callbackUrl)).WriteTo(wr, HtmlEncoder.Default);
 
-                    await _emailSender.SendEmailAsync(Input.Email, 
+                    await _emailSender.SendEmailAsync(Input.Email,
                         _loc.Text(LocalizedBackendMessages.VerificationEmailTitle).Value,
                         wr.ToString());
 
@@ -103,7 +103,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
                 foreach (var error in result.Errors)
                 {
                     //ModelState.AddModelError(string.Empty, error.Description);
-                    TempData.Danger(_loc.Text(error.Description).Value);
+                    TempData.Danger(error.Description);
                 }
             }
 

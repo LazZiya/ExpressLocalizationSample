@@ -77,7 +77,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
             if (remoteError != null)
             {
                 var wr = new StringWriter();
-                _loc.Text(LocalizedBackendMessages.ExternalLoginsProviderError, remoteError).WriteTo(wr, HtmlEncoder.Default);
+                _loc.Text(LocalizedBackendMessages.ExternalLoginsProviderError, args: remoteError).WriteTo(wr, HtmlEncoder.Default);
                 //ErrorMessage = $"Error from external provider: {remoteError}";
                 TempData.Danger(wr.ToString());
                 return RedirectToPage("./Login", new { ReturnUrl = returnUrl, Culture = culture });
