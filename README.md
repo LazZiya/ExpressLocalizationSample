@@ -1,6 +1,8 @@
-# ExpressLocalizationSample
+# ExpressLocalization Sample
 Fully localized project, based on the basic Asp.Net Core 2.2 template from Visual Studio, localized using [LazZiya.ExpressLocalization](https://github.com/LazZiya/ExpressLocalization).
 
+# DotNetCore version
+This project is based on **dotnetcore2.2**, a newer project based on **dotnetcore3.0** is available here: [ExpressLocalization Sample Core3](https://github.com/LazZiya/ExpressLocalizationSampleCore3)
 
 ## Features :
  - Custom (route value) RequestCultureProvider
