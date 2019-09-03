@@ -1,4 +1,4 @@
-# ExpressLocalization Sample
+ # ExpressLocalization Sample - Asp.Net Core 2.2
 Fully localized project, based on the basic Asp.Net Core 2.2 template from Visual Studio, localized using [LazZiya.ExpressLocalization](https://github.com/LazZiya/ExpressLocalization).
 
 # DotNetCore version
