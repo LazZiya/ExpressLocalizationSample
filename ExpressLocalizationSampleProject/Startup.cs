@@ -12,6 +12,9 @@ using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using LazZiya.ExpressLocalization;
 using ExpressLocalizationSampleProject.LocalizationResources;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Routing;
 
 namespace ExpressLocalizationSampleProject
 {
@@ -82,6 +85,28 @@ namespace ExpressLocalizationSampleProject
                     ops.ResourcesPath = "LocalizationResources";
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            // add culture value to route when user is redirected to login page
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Events = new CookieAuthenticationEvents
+                {
+                    OnRedirectToLogin = ctx =>
+                    {
+                        var culture = ctx.HttpContext.GetRouteValue("culture");
+                        var requestPath = ctx.Request.Path;
+
+                        if (culture == null)
+                        {
+                            culture = "en";
+                            requestPath = $"/{culture}{requestPath}";
+                        }
+
+                        ctx.Response.Redirect($"/{culture}/Identity/Account/Login/?ReturnUrl={requestPath}{ctx.Request.QueryString}");
+                        return Task.CompletedTask;
+                    }
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
