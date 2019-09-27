@@ -76,17 +76,16 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content($"~/{culture}");
             if (remoteError != null)
             {
-                var wr = new StringWriter();
-                _loc.Text(LocalizedBackendMessages.ExternalLoginsProviderError, args: remoteError).WriteTo(wr, HtmlEncoder.Default);
+                var str = _loc.GetLocalizedString(LocalizedBackendMessages.ExternalLoginsProviderError, args: remoteError);
                 //ErrorMessage = $"Error from external provider: {remoteError}";
-                TempData.Danger(wr.ToString());
+                TempData.Danger(str);
                 return RedirectToPage("./Login", new { ReturnUrl = returnUrl, Culture = culture });
             }
             var info = await _signInManager.GetExternalLoginInfoAsync();
             if (info == null)
             {
                 //ErrorMessage = "Error loading external login information.";
-                TempData.Danger(_loc.Text(LocalizedBackendMessages.ExternalLoginsLoadingError).Value);
+                TempData.Danger(_loc.GetLocalizedString(LocalizedBackendMessages.ExternalLoginsLoadingError));
 
                 return RedirectToPage("./Login", new { ReturnUrl = returnUrl, Culture = culture });
             }
@@ -126,7 +125,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
             if (info == null)
             {
                 //ErrorMessage = "Error loading external login information during confirmation.";
-                TempData.Danger(_loc.Text(LocalizedBackendMessages.ExternalLoginsLoadingConfirmationError).Value);
+                TempData.Danger(_loc.GetLocalizedString(LocalizedBackendMessages.ExternalLoginsLoadingConfirmationError));
                 return RedirectToPage("./Login", new { ReturnUrl = returnUrl, Culture = culture });
             }
 

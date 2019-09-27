@@ -119,7 +119,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
 
             await _signInManager.RefreshSignInAsync(user);
             //StatusMessage = "Your profile has been updated";
-            TempData.Success(_loc.Text(LocalizedBackendMessages.UserProfileUpdateSuccess).Value);
+            TempData.Success(_loc.GetLocalizedString(LocalizedBackendMessages.UserProfileUpdateSuccess));
             return RedirectToPage();
         }
 
@@ -145,15 +145,14 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
                 values: new { userId = userId, code = code, culture= CultureInfo.CurrentCulture.Name },
                 protocol: Request.Scheme);
 
-            var wr = new StringWriter();
-            _loc.Text(LocalizedBackendMessages.VerificationEmailBody, args: HtmlEncoder.Default.Encode(callbackUrl)).WriteTo(wr, HtmlEncoder.Default);
+            var str = _loc.GetLocalizedString(LocalizedBackendMessages.VerificationEmailBody, args: HtmlEncoder.Default.Encode(callbackUrl));
             await _emailSender.SendEmailAsync(
                 email,
-                _loc.Text(LocalizedBackendMessages.VerificationEmailTitle).Value,
-                wr.ToString());
+                _loc.GetLocalizedString(LocalizedBackendMessages.VerificationEmailTitle),
+                str);
 
             //StatusMessage = "Verification email sent. Please check your email.";
-            TempData.Info(_loc.Text(LocalizedBackendMessages.VerificationEmailSent).Value);
+            TempData.Info(_loc.GetLocalizedString(LocalizedBackendMessages.VerificationEmailSent));
             return RedirectToPage();
         }
     }

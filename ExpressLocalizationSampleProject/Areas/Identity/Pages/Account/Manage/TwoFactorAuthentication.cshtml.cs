@@ -71,7 +71,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
 
             await _signInManager.ForgetTwoFactorClientAsync();
             //StatusMessage = "The current browser has been forgotten. When you login again from this browser you will be prompted for your 2fa code.";
-            TempData.Success(_loc.Text(LocalizedBackendMessages.TwoFAForgetBrowserSuccess).Value);
+            TempData.Success(_loc.GetLocalizedString(LocalizedBackendMessages.TwoFAForgetBrowserSuccess));
 
             return RedirectToPage();
         }

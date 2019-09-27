@@ -70,7 +70,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
                 if (!await _userManager.CheckPasswordAsync(user, Input.Password))
                 {
                     //ModelState.AddModelError(string.Empty, "Password not correct.");
-                    TempData.Danger(_loc.Text(LocalizedBackendMessages.PasswordIncorrect).Value);
+                    TempData.Danger(_loc.GetLocalizedString(LocalizedBackendMessages.PasswordIncorrect));
                     return Page();
                 }
             }

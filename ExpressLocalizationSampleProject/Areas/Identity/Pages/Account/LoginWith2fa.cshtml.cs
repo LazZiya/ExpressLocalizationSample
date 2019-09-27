@@ -100,7 +100,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
             else
             {
                 _logger.LogWarning("Invalid authenticator code entered for user with ID '{UserId}'.", user.Id);
-                TempData.Danger(_loc.Text(LocalizedBackendMessages.InvalidAuthenticationCode).Value);
+                TempData.Danger(_loc.GetLocalizedString(LocalizedBackendMessages.InvalidAuthenticationCode));
                 return Page();
             }
         }

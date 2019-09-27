@@ -69,7 +69,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
             }
 
             await _signInManager.RefreshSignInAsync(user);
-            TempData.Success(_loc.Text(LocalizedBackendMessages.ExternalLoginsRemoveSuccess).Value);
+            TempData.Success(_loc.GetLocalizedString(LocalizedBackendMessages.ExternalLoginsRemoveSuccess));
             return RedirectToPage();
         }
 
@@ -107,7 +107,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
             // Clear the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
-            TempData.Success(_loc.Text(LocalizedBackendMessages.ExternalLoginsAddSuccess).Value);
+            TempData.Success(_loc.GetLocalizedString(LocalizedBackendMessages.ExternalLoginsAddSuccess));
             return RedirectToPage();
         }
     }

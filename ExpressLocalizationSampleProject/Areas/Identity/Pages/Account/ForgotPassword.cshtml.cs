@@ -63,13 +63,12 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
                     values: new { code, culture },
                     protocol: Request.Scheme);
 
-                var wr = new StringWriter();
-                _loc.Text(key:LocalizedBackendMessages.ResetPasswordEmailBody, args: HtmlEncoder.Default.Encode(callbackUrl)).WriteTo(wr, HtmlEncoder.Default);
+                var str = _loc.GetLocalizedString(key:LocalizedBackendMessages.ResetPasswordEmailBody, args: HtmlEncoder.Default.Encode(callbackUrl));
 
                 await _emailSender.SendEmailAsync(
                     Input.Email,
-                    _loc.Text(LocalizedBackendMessages.ResetPasswordEmailTitle).Value,
-                    wr.ToString());
+                    _loc.GetLocalizedString(LocalizedBackendMessages.ResetPasswordEmailTitle),
+                    str);
 
                 return RedirectToPage("./ForgotPasswordConfirmation", new { culture });
             }

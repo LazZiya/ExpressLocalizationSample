@@ -96,7 +96,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    TempData.Danger(_loc.Text(LocalizedBackendMessages.LoginInvalidAttempt).Value);
+                    TempData.Danger(_loc.GetLocalizedString(LocalizedBackendMessages.LoginInvalidAttempt));
                     return Page();
                 }
             }

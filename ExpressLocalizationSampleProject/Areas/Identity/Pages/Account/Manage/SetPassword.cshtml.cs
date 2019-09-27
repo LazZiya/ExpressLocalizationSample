@@ -87,14 +87,14 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
                 foreach (var error in addPasswordResult.Errors)
                 {
                     //ModelState.AddModelError(string.Empty, error.Description);
-                    TempData.Danger(_loc.Text(error.Description).Value);
+                    TempData.Danger(_loc.GetLocalizedString(error.Description));
                 }
                 return Page();
             }
 
             await _signInManager.RefreshSignInAsync(user);
             //StatusMessage = "Your password has been set.";
-            TempData.Success(_loc.Text(LocalizedBackendMessages.PasswordSetSuccess).Value);
+            TempData.Success(_loc.GetLocalizedString(LocalizedBackendMessages.PasswordSetSuccess));
 
             return RedirectToPage();
         }

@@ -89,7 +89,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
             foreach (var error in result.Errors)
             {
                 //ModelState.AddModelError(string.Empty, error.Description);
-                TempData.Danger(_loc.Text(error.Description).Value);
+                TempData.Danger(_loc.GetLocalizedString(error.Description));
             }
             return Page();
         }

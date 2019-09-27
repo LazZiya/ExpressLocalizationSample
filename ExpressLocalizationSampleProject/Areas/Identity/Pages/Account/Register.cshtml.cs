@@ -90,12 +90,11 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
                         values: new { userId = user.Id, code = code, culture = _culture },
                         protocol: Request.Scheme);
 
-                    var wr = new StringWriter();
-                    _loc.Text(LocalizedBackendMessages.VerificationEmailBody, args: HtmlEncoder.Default.Encode(callbackUrl)).WriteTo(wr, HtmlEncoder.Default);
+                    var str = _loc.GetLocalizedString(LocalizedBackendMessages.VerificationEmailBody, args: HtmlEncoder.Default.Encode(callbackUrl));
 
                     await _emailSender.SendEmailAsync(Input.Email,
-                        _loc.Text(LocalizedBackendMessages.VerificationEmailTitle).Value,
-                        wr.ToString());
+                        _loc.GetLocalizedString(LocalizedBackendMessages.VerificationEmailTitle),
+                        str);
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     return LocalRedirect(returnUrl);

@@ -95,7 +95,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
                 foreach (var error in changePasswordResult.Errors)
                 {
                     //ModelState.AddModelError(string.Empty, error.Description);
-                    TempData.Danger(_loc.Text(error.Description).Value);
+                    TempData.Danger(_loc.GetLocalizedString(error.Description));
                 }
                 return Page();
             }
@@ -103,7 +103,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
             await _signInManager.RefreshSignInAsync(user);
             _logger.LogInformation("User changed their password successfully.");
             //StatusMessage = "Your password has been changed.";
-            TempData.Success(_loc.Text(LocalizedBackendMessages.ChangePasswordSuccess).Value);
+            TempData.Success(_loc.GetLocalizedString(LocalizedBackendMessages.ChangePasswordSuccess));
 
             return RedirectToPage();
         }

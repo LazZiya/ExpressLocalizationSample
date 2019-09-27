@@ -72,7 +72,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
             RecoveryCodes = recoveryCodes.ToArray();
 
             _logger.LogInformation("User with ID '{UserId}' has generated new 2FA recovery codes.", userId);
-            TempData.Success(_loc.Text(LocalizedBackendMessages.GeneraterecoveryCodesSuccess).Value);
+            TempData.Success(_loc.GetLocalizedString(LocalizedBackendMessages.GeneraterecoveryCodesSuccess));
 
             return RedirectToPage("./ShowRecoveryCodes", new { culture = CultureInfo.CurrentCulture.Name });
         }

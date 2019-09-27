@@ -98,7 +98,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
 
             if (!is2faTokenValid)
             {
-                var locErr = _loc.Text("Verification code is invalid.").Value;
+                var locErr = _loc.GetLocalizedString("Verification code is invalid.");
 
                 ModelState.AddModelError("Input.Code", locErr);
                 TempData.Danger(locErr);

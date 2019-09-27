@@ -64,7 +64,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
 
             _logger.LogInformation("User with ID '{UserId}' has disabled 2fa.", _userManager.GetUserId(User));
             //StatusMessage = "2fa has been disabled. You can reenable 2fa when you setup an authenticator app";
-            TempData.Success(_loc.Text(LocalizedBackendMessages.TwoFADisableSuccess).Value);
+            TempData.Success(_loc.GetLocalizedString(LocalizedBackendMessages.TwoFADisableSuccess));
 
             return RedirectToPage("./TwoFactorAuthentication", new { culture = CultureInfo.CurrentCulture.Name });
         }

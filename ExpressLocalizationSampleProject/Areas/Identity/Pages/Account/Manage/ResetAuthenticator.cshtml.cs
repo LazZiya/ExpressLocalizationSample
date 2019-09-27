@@ -60,7 +60,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
 
             await _signInManager.RefreshSignInAsync(user);
             //StatusMessage = "Your authenticator app key has been reset, you will need to configure your authenticator app using the new key.";
-            TempData.Success(_loc.Text(LocalizedBackendMessages.ResetAuthenticationSuccess).Value);
+            TempData.Success(_loc.GetLocalizedString(LocalizedBackendMessages.ResetAuthenticationSuccess));
 
             return RedirectToPage("./EnableAuthenticator", new { culture = CultureInfo.CurrentCulture.Name });
         }
