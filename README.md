@@ -1,4 +1,4 @@
- # ExpressLocalization Sample - Asp.Net Core 2.2
+# ExpressLocalization Sample - Asp.Net Core 2.2
 Fully localized project, based on the basic Asp.Net Core 2.2 template from Visual Studio, localized using [LazZiya.ExpressLocalization](https://github.com/LazZiya/ExpressLocalization).
 
 # DotNetCore version
@@ -24,7 +24,7 @@ _some cultures needs fixing/adding few translations_
  - Czech
  - Dutch
  - English
- - French
+ - French (thanks to [@werddomain](https://github.com/werddomain) for fixing)
  - German
  - Hindi
  - Hungarian
@@ -34,11 +34,12 @@ _some cultures needs fixing/adding few translations_
  - Persian
  - Polish
  - Portuguese
- - Portuguese Brazil (by [@ismaelgasparin](https://github.com/ismaelgasparin))
- - Russian
+ - Portuguese Brazil (thanks to [@ismaelgasparin](https://github.com/ismaelgasparin) for adding)
+ - Russian (thanks to [@InfDev](https://github.com/InfDev) for fixing)
  - Spanish
  - Swedish
  - Turkish
+ - Ukrainian (thanks to [@InfDev](https://github.com/InfDev) for adding)
  - Vietnamese
 
 ## Project site:
