@@ -45,13 +45,14 @@ namespace ExpressLocalizationSampleProject
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddAntiforgery();
+            services.AddSession();
 
             var cultures = new CultureInfo[]
             {
-                new CultureInfo("en"),
                 new CultureInfo("ar"),
                 new CultureInfo("cs"),
                 new CultureInfo("de"),
+                new CultureInfo("en"),
                 new CultureInfo("es"),
                 new CultureInfo("fa"),
                 new CultureInfo("fr"),
@@ -70,20 +71,20 @@ namespace ExpressLocalizationSampleProject
                 new CultureInfo("uk"),
                 new CultureInfo("vi"),
                 new CultureInfo("zh"),
-
             };
-            services.AddSession();
 
             services.AddMvc()
                 .AddExpressLocalization<ExpressLocalizationResource, ViewLocalizationResource>(ops =>
                 {
+                    // uncomment and set to true to use only route culture provider
+                    // ops.UseAllCultureProviders = false;
+                    ops.ResourcesPath = "LocalizationResources";
                     ops.RequestLocalizationOptions = o =>
                     {
                         o.SupportedCultures = cultures;
                         o.SupportedUICultures = cultures;
                         o.DefaultRequestCulture = new RequestCulture("en");
                     };
-                    ops.ResourcesPath = "LocalizationResources";
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
