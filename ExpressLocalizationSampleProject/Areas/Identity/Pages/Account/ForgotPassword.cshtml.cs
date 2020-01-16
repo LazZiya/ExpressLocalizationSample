@@ -7,6 +7,7 @@ using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using ExpressLocalizationSampleProject.LocalizationResources;
 using LazZiya.ExpressLocalization;
+using LazZiya.ExpressLocalization.DataAnnotations;
 using LazZiya.ExpressLocalization.Messages;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -35,8 +36,8 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
-            [EmailAddress(ErrorMessage = DataAnnotationsErrorMessages.EmailAddressAttribute_Invalid)]
+            [ExRequired]
+            [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
         }

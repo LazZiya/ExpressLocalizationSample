@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ExpressLocalizationSampleProject.LocalizationResources;
 using LazZiya.ExpressLocalization;
+using LazZiya.ExpressLocalization.DataAnnotations;
 using LazZiya.ExpressLocalization.Messages;
 using LazZiya.TagHelpers.Alerts;
 using Microsoft.AspNetCore.Authorization;
@@ -41,7 +42,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
         public class InputModel
         {
             [BindProperty]
-            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
+            [ExRequired]
             [DataType(DataType.Text)]
             [Display(Name = "Recovery Code")]
             public string RecoveryCode { get; set; }

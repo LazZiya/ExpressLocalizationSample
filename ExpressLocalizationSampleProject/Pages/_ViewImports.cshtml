@@ -6,8 +6,9 @@
 
 @using System.Globalization
 
-@using LazZiya.TagHelpers
+
 @addTagHelper *, LazZiya.TagHelpers
 
-@using LazZiya.TagHelpers.Localization
+@* IMPORTANT : starting from v1.3.0 *@
 @addTagHelper *, LazZiya.TagHelpers.Localization
+@removeTagHelper Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper, Microsoft.AspNetCore.Mvc.TagHelpers

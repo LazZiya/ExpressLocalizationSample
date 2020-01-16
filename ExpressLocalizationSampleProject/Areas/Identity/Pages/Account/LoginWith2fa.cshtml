@@ -10,7 +10,7 @@
 <p localize-content>Your login is protected with an authenticator app. Enter your authenticator code below.</p>
 <div class="row">
     <div class="col-md-4">
-        <form method="post" asp-route-returnUrl="@Model.ReturnUrl" asp-route-culture="@culture">
+        <form method="post" asp-route-returnUrl="@Model.ReturnUrl" >
             <input asp-for="RememberMe" type="hidden" />
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
