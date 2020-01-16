@@ -3,5 +3,6 @@
 @namespace ExpressLocalizationSampleProject.Areas.Identity.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-@using LazZiya.TagHelpers.Localization
+@* IMPORTANT : starting from v1.3.0 *@
 @addTagHelper *, LazZiya.TagHelpers.Localization
+@removeTagHelper Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper, Microsoft.AspNetCore.Mvc.TagHelpers

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ExpressLocalizationSampleProject.LocalizationResources;
 using LazZiya.ExpressLocalization;
+using LazZiya.ExpressLocalization.DataAnnotations;
 using LazZiya.ExpressLocalization.Messages;
 using LazZiya.TagHelpers.Alerts;
 using Microsoft.AspNetCore.Identity;
@@ -38,15 +39,15 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
-            [StringLength(100, ErrorMessage = DataAnnotationsErrorMessages.StringLengthAttribute_ValidationErrorIncludingMinimum, MinimumLength = 6)]
+            [ExRequired]
+            [ExStringLength(100, MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "New password")]
             public string NewPassword { get; set; }
 
             [DataType(DataType.Password)]
             [Display(Name = "Confirm new password")]
-            [Compare("NewPassword", ErrorMessage = DataAnnotationsErrorMessages.CompareAttribute_MustMatch)]
+            [ExCompare("NewPassword")]
             public string ConfirmPassword { get; set; }
         }
 

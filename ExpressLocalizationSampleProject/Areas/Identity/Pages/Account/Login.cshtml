@@ -38,10 +38,10 @@
                 </div>
                 <div class="form-group">
                     <p>
-                        <a id="forgot-password" asp-route-culture="@culture" asp-page="./ForgotPassword" localize-content>Forgot your password?</a>
+                        <a id="forgot-password"  asp-page="./ForgotPassword" localize-content>Forgot your password?</a>
                     </p>
                     <p>
-                        <a asp-page="./Register" asp-route-culture="@culture" asp-route-returnUrl="@Model.ReturnUrl" localize-content>Register as a new user</a>
+                        <a asp-page="./Register"  asp-route-returnUrl="@Model.ReturnUrl" localize-content>Register as a new user</a>
                     </p>
                 </div>
             </form>
@@ -62,7 +62,7 @@
                 }
                 else
                 {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-culture="@culture" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                    <form id="external-account" asp-page="./ExternalLogin"  asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
                         <div>
                             <p>
                                 @foreach (var provider in Model.ExternalLogins)

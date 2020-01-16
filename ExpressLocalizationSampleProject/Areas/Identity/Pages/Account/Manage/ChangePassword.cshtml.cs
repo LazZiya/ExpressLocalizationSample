@@ -12,6 +12,7 @@ using LazZiya.TagHelpers.Alerts;
 using ExpressLocalizationSampleProject.LocalizationResources;
 using System.Globalization;
 using LazZiya.ExpressLocalization;
+using LazZiya.ExpressLocalization.DataAnnotations;
 
 namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
 {
@@ -42,20 +43,20 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
+            [ExRequired]
             [DataType(DataType.Password)]
             [Display(Name = "Current password")]
             public string OldPassword { get; set; }
 
-            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
-            [StringLength(100, ErrorMessage = DataAnnotationsErrorMessages.StringLengthAttribute_ValidationErrorIncludingMinimum, MinimumLength = 6)]
+            [ExRequired]
+            [ExStringLength(100, MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "New password")]
             public string NewPassword { get; set; }
 
             [DataType(DataType.Password)]
             [Display(Name = "Confirm new password")]
-            [Compare("NewPassword", ErrorMessage = DataAnnotationsErrorMessages.CompareAttribute_MustMatch)]
+            [ExCompare("NewPassword")]
             public string ConfirmPassword { get; set; }
         }
 

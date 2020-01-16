@@ -13,6 +13,7 @@ using LazZiya.ExpressLocalization.Messages;
 using LazZiya.TagHelpers.Alerts;
 using LazZiya.ExpressLocalization;
 using ExpressLocalizationSampleProject.LocalizationResources;
+using LazZiya.ExpressLocalization.DataAnnotations;
 
 namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
 {
@@ -45,12 +46,12 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
-            [EmailAddress(ErrorMessage = DataAnnotationsErrorMessages.EmailAddressAttribute_Invalid)]
+            [ExRequired]
+            [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
-            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
+            [ExRequired]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
