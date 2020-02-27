@@ -22,9 +22,9 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IEmailSender _emailSender;
-        private readonly SharedCultureLocalizer _loc;
+        private readonly ISharedCultureLocalizer _loc;
 
-        public ForgotPasswordModel(UserManager<IdentityUser> userManager, IEmailSender emailSender, SharedCultureLocalizer loc)
+        public ForgotPasswordModel(UserManager<IdentityUser> userManager, IEmailSender emailSender, ISharedCultureLocalizer loc)
         {
             _userManager = userManager;
             _emailSender = emailSender;

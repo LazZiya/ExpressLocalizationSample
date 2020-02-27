@@ -21,13 +21,13 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<ChangePasswordModel> _logger;
-        private readonly SharedCultureLocalizer _loc;
+        private readonly ISharedCultureLocalizer _loc;
 
         public ChangePasswordModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             ILogger<ChangePasswordModel> logger,
-            SharedCultureLocalizer loc)
+            ISharedCultureLocalizer loc)
         {
             _userManager = userManager;
             _signInManager = signInManager;

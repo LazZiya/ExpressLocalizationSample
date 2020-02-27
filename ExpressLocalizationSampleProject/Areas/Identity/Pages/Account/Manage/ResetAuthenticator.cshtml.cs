@@ -18,13 +18,13 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
         UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         ILogger<ResetAuthenticatorModel> _logger;
-        private readonly SharedCultureLocalizer _loc;
+        private readonly ISharedCultureLocalizer _loc;
 
         public ResetAuthenticatorModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             ILogger<ResetAuthenticatorModel> logger,
-            SharedCultureLocalizer loc)
+            ISharedCultureLocalizer loc)
         {
             _userManager = userManager;
             _signInManager = signInManager;

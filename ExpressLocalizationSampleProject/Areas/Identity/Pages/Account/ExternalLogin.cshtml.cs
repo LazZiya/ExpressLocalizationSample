@@ -26,14 +26,14 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<ExternalLoginModel> _logger;
-        private readonly SharedCultureLocalizer _loc;
+        private readonly ISharedCultureLocalizer _loc;
         private readonly string culture;
 
         public ExternalLoginModel(
             SignInManager<IdentityUser> signInManager,
             UserManager<IdentityUser> userManager,
             ILogger<ExternalLoginModel> logger,
-            SharedCultureLocalizer loc)
+            ISharedCultureLocalizer loc)
         {
             _signInManager = signInManager;
             _userManager = userManager;

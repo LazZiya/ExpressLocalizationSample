@@ -22,11 +22,11 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
-        private SharedCultureLocalizer _loc;
+        private ISharedCultureLocalizer _loc;
 
         private readonly string _culture;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, SharedCultureLocalizer loc)
+        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, ISharedCultureLocalizer loc)
         {
             _signInManager = signInManager;
             _logger = logger;

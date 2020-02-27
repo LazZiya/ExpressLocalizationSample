@@ -23,13 +23,13 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly IEmailSender _emailSender;
-        private readonly SharedCultureLocalizer _loc;
+        private readonly ISharedCultureLocalizer _loc;
 
         public IndexModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             IEmailSender emailSender,
-            SharedCultureLocalizer loc)
+            ISharedCultureLocalizer loc)
         {
             _userManager = userManager;
             _signInManager = signInManager;
