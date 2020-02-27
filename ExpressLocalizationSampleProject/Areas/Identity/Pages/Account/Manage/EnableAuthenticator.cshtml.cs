@@ -58,7 +58,7 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
         public class InputModel
         {
             [ExRequired]
-            [StringLength(7, MinimumLength = 6)]
+            [ExStringLength(7, MinimumLength = 6)]
             [DataType(DataType.Text)]
             [Display(Name = "Verification Code")]
             public string Code { get; set; }

@@ -13,11 +13,11 @@
         <localize>
             <p>Your account contains personal data that you have given us. This page allows you to download or delete that data.</p><p><strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong></p>
         </localize>
-        <form id="download-data" asp-page="DownloadPersonalData" asp-route-culture="@culture" method="post" class="form-group">
+        <form id="download-data" asp-page="DownloadPersonalData"  method="post" class="form-group">
             <button class="btn btn-primary" type="submit" localize-content>Download</button>
         </form>
         <p>
-            <a id="delete" asp-page="DeletePersonalData" asp-route-culture="@culture" class="btn btn-primary" localize-content>Delete</a>
+            <a id="delete" asp-page="DeletePersonalData"  class="btn btn-primary" localize-content>Delete</a>
         </p>
     </div>
 </div>
