@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using LazZiya.ExpressLocalization.Messages;
+using LazZiya.ExpressLocalization.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -10,19 +10,19 @@ namespace ExpressLocalizationSampleProject.Pages
     {
         public class TestModel
         {
-            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
+            [ExRequired]
             [Display(Name = "ID")]
             public int ID { get; set; }
 
-            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
+            [ExRequired]
             [Display(Name = "Name")]
             public string Name { get; set; }
 
-            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
+            [ExRequired]
             [Display(Name = "Price")]
             public decimal Price { get; set; }
 
-            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
+            [ExRequired]
             [Display(Name = "Date")]
             public DateTime? Date { get; set; }
         }

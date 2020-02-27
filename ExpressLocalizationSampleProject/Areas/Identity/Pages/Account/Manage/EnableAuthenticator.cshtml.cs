@@ -15,6 +15,7 @@ using ExpressLocalizationSampleProject.LocalizationResources;
 using LazZiya.TagHelpers.Alerts;
 using LazZiya.ExpressLocalization;
 using System.Globalization;
+using LazZiya.ExpressLocalization.DataAnnotations;
 
 namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
 {
@@ -56,8 +57,8 @@ namespace ExpressLocalizationSampleProject.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            [Required(ErrorMessage = DataAnnotationsErrorMessages.RequiredAttribute_ValidationError)]
-            [StringLength(7, ErrorMessage = DataAnnotationsErrorMessages.StringLengthAttribute_ValidationErrorIncludingMinimum, MinimumLength = 6)]
+            [ExRequired]
+            [StringLength(7, MinimumLength = 6)]
             [DataType(DataType.Text)]
             [Display(Name = "Verification Code")]
             public string Code { get; set; }
