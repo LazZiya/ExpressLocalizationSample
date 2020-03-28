@@ -7,10 +7,10 @@ This project is based on **dotnetcore2.2**, a newer project based on **dotnetcor
 ## Features :
  - Custom (route value) RequestCultureProvider
  - Custom IHtmlStringLocalizer
- - Custom [LocalizeTagHelper](https://github.com/lazziya/TagHelpers.Localization)
+ - Custom [LocalizeTagHelper](https://github.com/LazZiya/ExpressLocalization/wiki/Localize-TagHelper)
  - Validating localized input fields e.g. (12,34 and 12.34)
  - Localization of:
-   - Razor Views (All views locailzed with [LocalizeTagHelper](https://github.com/lazziya/TagHelpers.Localization))
+   - Razor Views (All views locailzed with [LocalizeTagHelper](https://github.com/LazZiya/ExpressLocalization/wiki/Localize-TagHelper))
    - DataAnnotations
    - Model binding and model validation error messages
    - IdentityErrorDescriber messages
@@ -53,7 +53,7 @@ Some parts of this project is using [LazZiya.TagHelpers](https://github.com/LazZ
  - LanguageNav dropdown
  - Client side validation scripts
  - AlertTagHelper for bootstrap 4 alerts
- - Localization of razor views done with [LocalizeTagHelper](https://github.com/lazziya/TagHelpers.Localization).
+ - Localization of razor views done with [LocalizeTagHelper](https://github.com/LazZiya/ExpressLocalization/wiki/Localize-TagHelper).
 
 ## Contributers
 Contributer | Role
